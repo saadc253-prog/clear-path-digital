@@ -73,17 +73,15 @@ export default function ServicesOverview() {
                         >
                             <Tilt className="h-full">
                                 <Link href={service.href} className="block h-full">
-                                    <div className="h-full glass-card p-10 rounded-[2rem] transition-all duration-500 hover:bg-white/5 hover:border-primary/30 hover:shadow-[0_0_30px_-10px_rgba(16,185,129,0.2)] flex flex-col justify-between border border-white/5 bg-gradient-to-b from-white/5 to-transparent">
-                                        <div>
-                                            <div className="mb-8 w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-500">
-                                                <service.icon className="h-7 w-7" />
-                                            </div>
-                                            <h3 className="text-3xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">{service.title}</h3>
-                                            <p className="text-muted-foreground font-light text-xl leading-relaxed">
-                                                {service.description}
-                                            </p>
+                                    <div className="h-full glass-card p-8 rounded-[2rem] transition-all duration-500 hover:bg-white/5 hover:border-primary/30 hover:shadow-[0_0_30px_-10px_rgba(16,185,129,0.2)] border border-white/5 bg-gradient-to-b from-white/5 to-transparent">
+                                        <div className="mb-6 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-500">
+                                            <service.icon className="h-6 w-6" />
                                         </div>
-                                        <div className="mt-10 flex items-center text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+                                        <h3 className="text-2xl font-bold mb-3 tracking-tight group-hover:text-primary transition-colors">{service.title}</h3>
+                                        <p className="text-muted-foreground font-light text-base leading-relaxed mb-6">
+                                            {service.description}
+                                        </p>
+                                        <div className="flex items-center text-sm font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                                             Learn more <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                                         </div>
                                     </div>
