@@ -61,17 +61,42 @@ body {
 
 /* Glassmorphism Utilities */
 .glass {
-  background: rgba(23, 23, 23, 0.7);
+  background: rgba(2, 6, 23, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-card {
-  background: rgba(23, 23, 23, 0.4);
+  background: rgba(2, 6, 23, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Fluid Typography Utilities */
+@layer utilities {
+  .text-fluid-h1 {
+    font-size: clamp(3.5rem, 12vw, 12rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+  }
+
+  .text-fluid-h2 {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  .text-fluid-body {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  .section-padding {
+    padding-top: clamp(4rem, 10vw, 8rem);
+    padding-bottom: clamp(4rem, 10vw, 8rem);
+  }
 }
 
 /* Custom Scrollbar */
@@ -80,16 +105,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background: #1e293b;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #404040;
+  background: #10b981;
 }
 
 /* Lenis Smooth Scroll */

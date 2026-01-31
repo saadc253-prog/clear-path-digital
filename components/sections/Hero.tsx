@@ -9,16 +9,15 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
     return (
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20 pb-16 bg-background">
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden section-padding bg-background">
             {/* Emerald Gradient Swirl */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] -z-10 mix-blend-screen opacity-50 animate-pulse" />
 
-            {/* Floating 3D-look elements */}
+            {/* Floating Reactive elements */}
             <motion.div
                 animate={{
                     y: [0, -20, 0],
                     rotate: [0, 5, 0],
-                    scale: [1, 1.1, 1]
                 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-1/4 right-[10%] w-32 h-32 border border-primary/20 rounded-full blur-sm -z-10"
@@ -27,7 +26,6 @@ export default function Hero() {
                 animate={{
                     y: [0, 20, 0],
                     rotate: [0, -10, 0],
-                    scale: [1, 1.05, 1]
                 }}
                 transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="absolute bottom-1/4 left-[5%] w-48 h-48 border border-white/5 rounded-[2rem] blur-md -z-10"
@@ -38,22 +36,22 @@ export default function Hero() {
                     {/* Badge */}
                     <FadeIn direction="down">
                         <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary shadow-[0_0_20px_-5px_#10b981]">
-                            Digital Agency
+                            Clear Path Digital
                         </span>
                     </FadeIn>
 
                     {/* Headline */}
                     <FadeIn className="max-w-6xl space-y-6">
-                        <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tighter text-foreground leading-[0.85] select-none">
-                            FUTURE <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">PROOF.</span>
+                        <h1 className="text-fluid-h1 font-bold tracking-tighter text-foreground leading-[0.85] select-none">
+                            ENGINEERING <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">RESULTS.</span>
                         </h1>
                     </FadeIn>
 
                     {/* Subtext */}
-                    <FadeIn className="max-w-2xl text-muted-foreground text-xl md:text-2xl font-light leading-relaxed" delay={0.2}>
-                        We engineer digital experiences that define brands. <br className="hidden md:block" />
-                        <span className="text-white">Minimalist design, maximalist impact.</span>
+                    <FadeIn className="max-w-2xl text-muted-foreground text-fluid-body font-light leading-relaxed" delay={0.2}>
+                        We craft high-performance digital ecosystems for <br className="hidden md:block" />
+                        brands that refuse to settle for average.
                     </FadeIn>
 
                     {/* CTA Buttons */}

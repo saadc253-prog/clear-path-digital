@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import SmoothScroller from '@/components/layout/SmoothScroller';
+import MouseFollower from '@/components/animations/MouseFollower';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <body className={cn(inter.variable, "bg-background text-foreground overflow-x-hidden min-h-screen flex flex-col")}>
+        <MouseFollower />
         <SmoothScroller>
           <Navbar />
           <div className="flex-grow pt-16">

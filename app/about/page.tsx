@@ -5,17 +5,18 @@ import { Users, Target, Zap, Globe } from 'lucide-react';
 
 export default function AboutPage() {
     return (
-        <main className="pt-32 pb-16">
+        <main className="section-padding">
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
-                <FadeIn className="max-w-4xl mx-auto text-center mb-20">
-                    <span className="inline-block py-1 px-4 rounded-full border border-white/10 bg-white/5 text-xs font-medium tracking-widest uppercase text-muted-foreground mb-6">
-                        About Us
+                <FadeIn className="max-w-5xl mx-auto text-center mb-24">
+                    <span className="inline-block py-1 px-4 rounded-full border border-primary/20 bg-primary/5 text-xs font-medium tracking-widest uppercase text-primary mb-6">
+                        Authority in Motion
                     </span>
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
-                        Architects of the <br /> <span className="text-muted-foreground">Digital Future.</span>
+                    <h1 className="text-fluid-h1 font-bold tracking-tight mb-8">
+                        Architecting the <br /> <span className="text-muted-foreground">Digital Future.</span>
                     </h1>
-                    <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
-                        We are a collective of visionaries, developers, and strategists obsessed with perfection.
+                    <p className="text-fluid-body text-muted-foreground font-light max-w-3xl mx-auto leading-relaxed">
+                        We are a high-performance collective of engineers, designers, and growth strategists.
+                        We don't build websites; we build the digital infrastructure that market leaders use to dominate their space.
                     </p>
                 </FadeIn>
 
