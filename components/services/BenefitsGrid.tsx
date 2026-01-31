@@ -38,7 +38,7 @@ export default function BenefitsGrid({
 
                 <StaggerContainer className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {benefits.map((benefit, index) => (
-                        <FadeIn key={index} className="glass-card p-8 rounded-2xl hover:bg-white/5 transition-colors duration-500 group">
+                        <FadeIn key={index} className="glass-card p-8 rounded-[2rem] border border-white/5 hover:bg-white/5 transition-colors duration-500 group mobile-reactive">
                             <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-500">
                                 {benefit.icon}
                             </div>

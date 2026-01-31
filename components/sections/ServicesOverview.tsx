@@ -71,7 +71,7 @@ export default function ServicesOverview() {
                             delay={index * 0.1}
                             className="group"
                         >
-                            <Tilt className="h-full">
+                            <Tilt className="h-full mobile-reactive">
                                 <Link href={service.href} className="block h-full">
                                     <div className="h-full glass-card p-8 rounded-[2rem] transition-all duration-500 hover:bg-white/5 hover:border-primary/30 hover:shadow-[0_0_30px_-10px_rgba(16,185,129,0.2)] border border-white/5 bg-gradient-to-b from-white/5 to-transparent">
                                         <div className="mb-6 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-500">

@@ -28,24 +28,24 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
 
                 <div className="relative max-w-4xl mx-auto">
                     {/* Vertical Line */}
-                    <div className="absolute right-8 md:right-1/2 top-0 bottom-0 w-px bg-white/10 md:translate-x-1/2" />
+                    <div className="absolute left-8 md:right-1/2 md:left-auto top-0 bottom-0 w-px bg-white/10 md:translate-x-1/2" />
 
-                    <div className="space-y-32">
+                    <div className="space-y-24 md:space-y-32">
                         {steps.map((step, index) => (
-                            <FadeIn key={index} className="relative flex flex-col md:flex-row items-center group">
+                            <FadeIn key={index} className="relative flex flex-col md:flex-row items-start md:items-center group">
 
                                 {/* Text Content */}
-                                <div className={`w-full md:w-1/2 pr-16 md:pr-24 text-right ${index % 2 !== 0 ? 'md:order-1 md:text-left md:pl-24 md:pr-0' : ''}`}>
-                                    <h3 className="text-3xl font-bold mb-3 text-white group-hover:text-primary transition-colors duration-300">
+                                <div className={`w-full pl-24 md:pl-0 md:w-1/2 md:pr-24 text-left md:text-right ${index % 2 !== 0 ? 'md:order-1 md:text-left md:pl-24 md:pr-0' : ''}`}>
+                                    <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white group-hover:text-primary transition-colors duration-300">
                                         {step.title}
                                     </h3>
-                                    <p className="text-muted-foreground text-lg font-light leading-relaxed">
+                                    <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
                                         {step.description}
                                     </p>
                                 </div>
 
                                 {/* Number Bubble */}
-                                <div className="absolute right-0 md:right-1/2 w-16 h-16 rounded-full border border-white/10 bg-background md:translate-x-1/2 flex items-center justify-center text-xl font-light text-muted-foreground group-hover:border-primary group-hover:text-primary transition-all duration-300 z-10">
+                                <div className="absolute left-0 md:left-auto md:right-1/2 w-16 h-16 rounded-full border border-white/10 bg-background md:translate-x-1/2 flex items-center justify-center text-xl font-light text-muted-foreground group-hover:border-primary group-hover:text-primary transition-all duration-300 z-10 mobile-reactive">
                                     {index + 1}
                                 </div>
 
