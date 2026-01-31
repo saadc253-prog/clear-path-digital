@@ -102,21 +102,7 @@ export default function ServicesPage() {
     ];
 
     return (
-        <main className="min-h-screen">
-            <ServiceHero
-                title="Our Services"
-                subtitle="Digital Services for Strategic Growth"
-                description="End-to-end digital solutions that help businesses build a strong presence, attract customers, and operate more efficiently."
-                gradientFrom="from-emerald-500/20"
-                gradientTo="to-background"
-            />
-
-            <ProblemSolution
-                problem="Disjointed digital efforts lead to slow growth and operational inefficiencies. Businesses often struggle to find a reliable partner for both engineering and marketing."
-                solution="We provide integrated digital solutions under one roof—combining high-performance tech with results-driven marketing and support."
-                outcome="A cohesive digital ecosystem that drives consistent growth, improves customer experience, and scales with your business."
-            />
-
+        <main className="min-h-screen pt-32">
             {/* Detailed Services Grid */}
             <section className="py-24 relative overflow-hidden">
                 <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
