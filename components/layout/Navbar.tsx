@@ -42,9 +42,9 @@ export default function Navbar() {
                 style={{ scaleX }}
             />
 
-            <div className="container px-4 md:px-6">
+            <div className="w-full max-w-[1400px] px-4 mx-auto">
                 <nav
-                    className={`mx-auto max-w-5xl rounded-full transition-all duration-500 border ${isScrolled
+                    className={`mx-auto w-full max-w-5xl rounded-full transition-all duration-500 border ${isScrolled
                         ? 'glass px-6 py-3 border-white/5 shadow-lg'
                         : 'bg-transparent border-transparent px-2 py-2'
                         } flex items-center justify-between`}

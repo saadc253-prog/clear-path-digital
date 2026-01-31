@@ -48,9 +48,9 @@ const services = [
 
 export default function ServicesOverview() {
     return (
-        <section className="section-padding relative">
+        <section className="section-padding relative overflow-hidden">
             {/* Gradient Blob - Emerald */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl -z-10 opacity-30" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] h-[150vw] max-w-[800px] max-h-[800px] bg-primary/10 rounded-full blur-3xl -z-10 opacity-30" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <FadeIn className="mb-24 text-center max-w-4xl mx-auto">

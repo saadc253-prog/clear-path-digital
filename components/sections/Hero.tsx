@@ -11,7 +11,7 @@ export default function Hero() {
     return (
         <section className="relative flex min-h-screen items-center justify-center overflow-hidden section-padding bg-background">
             {/* Emerald Gradient Swirl */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] -z-10 mix-blend-screen opacity-50 animate-pulse" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] h-[150vw] max-w-[800px] max-h-[800px] bg-primary/20 rounded-full blur-[120px] -z-10 mix-blend-screen opacity-50 animate-pulse" />
 
             {/* Floating Reactive elements */}
             <motion.div

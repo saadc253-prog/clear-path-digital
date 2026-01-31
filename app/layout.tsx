@@ -25,7 +25,7 @@ export default function RootLayout({
         <MouseFollower />
         <SmoothScroller>
           <Navbar />
-          <div className="flex-grow pt-16">
+          <div className="flex-grow pt-16 overflow-hidden w-full relative">
             {children}
           </div>
           <Footer />

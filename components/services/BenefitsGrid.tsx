@@ -22,7 +22,7 @@ export default function BenefitsGrid({
     subtitle = "The Advantage"
 }: BenefitsGridProps) {
     return (
-        <section className="py-32 relative">
+        <section className="py-32 relative overflow-hidden">
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <FadeIn className="text-center mb-20 max-w-3xl mx-auto">
                     <span className="inline-block py-1 px-4 rounded-full border border-white/10 bg-white/5 text-xs font-medium tracking-widest uppercase text-muted-foreground mb-6">
