@@ -23,7 +23,7 @@ export default function ContactCTA() {
                     <p className="text-fluid-body text-muted-foreground max-w-3xl mx-auto mb-12 font-light relative z-10">
                         Whether you need a high-converting website, improved search rankings, or reliable customer support services, Clear Path Digital is here to help.
                     </p>
-                    <Button size="lg" asChild className="relative z-10 rounded-full px-12 h-16 text-lg group bg-white text-black hover:bg-white/90 shadow-xl">
+                    <Button size="lg" asChild className="relative z-10 group bg-white text-black hover:bg-white/90 shadow-xl w-full max-w-sm mx-auto min-[400px]:w-auto border-none">
                         <Link href="/contact">
                             Request a Free Consultation
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

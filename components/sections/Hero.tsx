@@ -42,7 +42,7 @@ export default function Hero() {
 
                     {/* Headline */}
                     <FadeIn className="max-w-6xl space-y-6">
-                        <h1 className="text-fluid-h1 font-bold tracking-tighter text-foreground leading-[0.85] select-none">
+                        <h1 className="text-fluid-h1 font-bold tracking-tighter text-foreground leading-[0.95] md:leading-[0.85] select-none">
                             Grow Your Business Online with <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Proven Digital Solutions</span>
                         </h1>
@@ -56,7 +56,7 @@ export default function Hero() {
 
                     {/* CTA Buttons */}
                     <FadeIn delay={0.4} className="flex flex-col gap-6 min-[400px]:flex-row justify-center items-center pt-8">
-                        <Button size="lg" asChild className="rounded-full px-10 h-14 text-lg group bg-primary text-white hover:bg-primary/90 shadow-[0_0_40px_-10px_#10b981] border border-primary/20">
+                        <Button size="lg" asChild className="group bg-primary text-white hover:bg-primary/90 shadow-[0_0_40px_-10px_#10b981] border border-primary/20 w-full min-[400px]:w-auto">
                             <Link href="/contact">
                                 Get a Free Consultation
                                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

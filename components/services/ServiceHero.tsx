@@ -37,7 +37,7 @@ export default function ServiceHero({
                         <span className="inline-block py-1 px-4 rounded-full border border-white/10 bg-white/5 text-xs font-medium tracking-widest uppercase text-muted-foreground mb-6">
                             {subtitle}
                         </span>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[0.9]">
+                        <h1 className="text-fluid-h1 font-bold tracking-tight text-foreground leading-[1] md:leading-[0.9]">
                             {title}
                         </h1>
                     </motion.div>

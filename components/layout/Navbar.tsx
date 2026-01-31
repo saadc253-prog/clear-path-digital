@@ -93,8 +93,19 @@ export default function Navbar() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-40 bg-background md:hidden"
+                        className="fixed inset-0 z-50 bg-background md:hidden"
                     >
+                        {/* Close button inside overlay */}
+                        <div className="absolute top-8 right-8 z-[60]">
+                            <button
+                                className="p-2 text-foreground mobile-reactive"
+                                onClick={() => setMobileMenuOpen(false)}
+                                aria-label="Close menu"
+                            >
+                                <X size={32} />
+                            </button>
+                        </div>
+
                         <div className="flex flex-col h-full pt-32 px-8">
                             <div className="flex flex-col gap-6">
                                 {navLinks.map((link, i) => (
