@@ -1,3 +1,5 @@
+'use client';
+
 import ServiceHero from '@/components/services/ServiceHero';
 import ProblemSolution from '@/components/services/ProblemSolution';
 import ProcessTimeline from '@/components/services/ProcessTimeline';
