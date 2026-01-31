@@ -69,8 +69,7 @@ export default function ServicesOverview() {
                         <FadeIn
                             key={service.title}
                             delay={index * 0.1}
-                            className={`group ${index === 0 || index === 3 ? 'md:col-span-2' : ''
-                                }`}
+                            className="group"
                         >
                             <Tilt className="h-full">
                                 <Link href={service.href} className="block h-full">
