@@ -18,14 +18,14 @@ export default function ContactCTA() {
                     <div className="absolute -left-20 -bottom-20 w-96 h-96 border border-white/5 rounded-full z-0" />
 
                     <h2 className="text-fluid-h2 font-bold tracking-tighter mb-8 relative z-10">
-                        Ready to <span className="text-primary drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]">Scale</span>?
+                        Ready to Grow Your Business <span className="text-primary drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]">Online?</span>
                     </h2>
                     <p className="text-fluid-body text-muted-foreground max-w-3xl mx-auto mb-12 font-light relative z-10">
-                        Stop settling for average growth. Partner with the engineers of digital authority.
+                        Whether you need a high-converting website, improved search rankings, or reliable customer support services, Clear Path Digital is here to help.
                     </p>
                     <Button size="lg" asChild className="relative z-10 rounded-full px-12 h-16 text-lg group bg-white text-black hover:bg-white/90 shadow-xl">
                         <Link href="/contact">
-                            Start a Project
+                            Request a Free Consultation
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </Button>

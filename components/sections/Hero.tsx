@@ -43,27 +43,27 @@ export default function Hero() {
                     {/* Headline */}
                     <FadeIn className="max-w-6xl space-y-6">
                         <h1 className="text-fluid-h1 font-bold tracking-tighter text-foreground leading-[0.85] select-none">
-                            ENGINEERING <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">RESULTS.</span>
+                            Grow Your Business Online with <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Proven Digital Solutions</span>
                         </h1>
                     </FadeIn>
 
                     {/* Subtext */}
-                    <FadeIn className="max-w-2xl text-muted-foreground text-fluid-body font-light leading-relaxed" delay={0.2}>
-                        We craft high-performance digital ecosystems for <br className="hidden md:block" />
-                        brands that refuse to settle for average.
+                    <FadeIn className="max-w-4xl text-muted-foreground text-fluid-body font-light leading-relaxed" delay={0.2}>
+                        Clear Path Digital helps businesses grow through high-performance web development,
+                        SEO optimization, social media marketing, professional graphic design, and reliable customer support services.
                     </FadeIn>
 
                     {/* CTA Buttons */}
                     <FadeIn delay={0.4} className="flex flex-col gap-6 min-[400px]:flex-row justify-center items-center pt-8">
                         <Button size="lg" asChild className="rounded-full px-10 h-14 text-lg group bg-primary text-white hover:bg-primary/90 shadow-[0_0_40px_-10px_#10b981] border border-primary/20">
                             <Link href="/contact">
-                                Start Project
+                                Get a Free Consultation
                                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                             </Link>
                         </Button>
-                        <Link href="/work" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors hover:underline underline-offset-4">
-                            View Case Studies
+                        <Link href="/services" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors hover:underline underline-offset-4">
+                            View Our Services
                         </Link>
                     </FadeIn>
                 </StaggerContainer>

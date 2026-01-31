@@ -31,7 +31,7 @@ export default function Footer() {
                             <Logo />
                         </Link>
                         <p className="text-sm text-muted-foreground">
-                            Elevating brands with premium digital solutions. We build future-proof businesses.
+                            Clear Path Digital provides web development, SEO services, social media marketing, graphic design, live chat support, and call support services for businesses worldwide.
                         </p>
                     </div>
 

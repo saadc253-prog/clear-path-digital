@@ -9,38 +9,38 @@ import Link from 'next/link';
 
 const services = [
     {
-        title: 'Web Development',
-        description: 'Custom, high-performance websites built with Next.js and React.',
+        title: 'Custom Web Development',
+        description: 'We build fast, secure, and scalable websites using modern technologies like React and Next.js. Our custom web development services focus on performance, user experience, and conversion—helping businesses turn visitors into customers.',
         icon: Code,
         href: '/services/web-development',
     },
     {
         title: 'SEO Optimization',
-        description: 'Data-driven strategies to increase visibility and organic traffic.',
+        description: 'Our SEO services are designed to improve search visibility, organic traffic, and website performance. We use proven on-page, technical, and content SEO strategies to help businesses rank higher and grow sustainably.',
         icon: Search,
         href: '/services/seo',
     },
     {
         title: 'Social Media Marketing',
-        description: 'Engaging content and campaigns to grow your brand audience.',
+        description: 'We help businesses grow their online presence with data-driven social media marketing strategies. From content creation to campaign management, we ensure consistent engagement and measurable results.',
         icon: Share2,
         href: '/services/social-media',
     },
     {
-        title: 'Graphic Design',
-        description: 'Stunning visuals and branding that resonate with your customers.',
+        title: 'Professional Graphic Design',
+        description: 'We create clean, impactful designs that strengthen brand identity and support marketing efforts. Our graphic design services include branding, social media creatives, and marketing visuals tailored to your business goals.',
         icon: Palette,
         href: '/services/graphic-design',
     },
     {
-        title: 'Chat Support',
-        description: '24/7 live chat support teams to handle customer inquiries.',
+        title: '24/7 Live Chat Support',
+        description: 'Our trained live chat support agents help businesses respond instantly to customer inquiries, increase conversions, and improve customer satisfaction across websites and digital platforms.',
         icon: MessageSquare,
         href: '/services/chat-support',
     },
     {
-        title: 'Call Support',
-        description: 'Professional call handling and customer service solutions.',
+        title: 'Outsourced Call Support',
+        description: 'We provide professional inbound and outbound call support services to handle customer queries efficiently, ensuring reliable communication and a positive customer experience.',
         icon: Phone,
         href: '/services/call-support',
     },
@@ -48,18 +48,19 @@ const services = [
 
 export default function ServicesOverview() {
     return (
-        <section className="py-32 relative">
-            {/* Gradient Blob - Orange */}
+        <section className="section-padding relative">
+            {/* Gradient Blob - Emerald */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl -z-10 opacity-30" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
-                <FadeIn className="mb-24 text-center max-w-3xl mx-auto">
-                    <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_var(--color-primary)]">
-                        Expertise
+                <FadeIn className="mb-24 text-center max-w-4xl mx-auto">
+                    <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_#10b981]">
+                        What We Offer
                     </span>
-                    <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">Digital Solutions.</h2>
-                    <p className="text-xl md:text-2xl text-muted-foreground font-light">
-                        Comprehensive strategies tailored to drive your growth.
+                    <h2 className="text-fluid-h2 font-bold tracking-tight mb-8">Our Services</h2>
+                    <p className="text-fluid-body text-muted-foreground font-light">
+                        Clear Path Digital helps businesses grow through integrated, high-performance digital solutions
+                        tailored to your unique goals and business objectives.
                     </p>
                 </FadeIn>
 
