@@ -12,9 +12,10 @@ export default function ContactPage() {
         e.preventDefault();
         setStatus('SENDING');
 
+        const ACCESS_KEY = "ec100b76-0d43-4a48-86d0-fd695f9ab831"; // Digital Power Key 🚀
+
         const formData = new FormData(e.currentTarget);
-        // access_key for Web3Forms
-        formData.append("access_key", "ea8b17b6-c56a-4467-9c98-df570188667c");
+        formData.append("access_key", ACCESS_KEY);
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
