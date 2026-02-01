@@ -1,5 +1,5 @@
 'use client';
-
+// Build trigger: Updated Industry Gallery v1.1
 import { useState } from 'react';
 import FadeIn from '@/components/animations/FadeIn';
 import StaggerContainer from '@/components/animations/StaggerContainer';
