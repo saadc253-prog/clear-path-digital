@@ -1,12 +1,12 @@
 'use client';
-// Build trigger: Updated Industry Gallery v1.1
+// Build trigger: Updated Industry Gallery v1.2
 import { useState } from 'react';
 import FadeIn from '@/components/animations/FadeIn';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import Tilt from '@/components/animations/Tilt';
 import ContactCTA from '@/components/sections/ContactCTA';
 import Link from 'next/link';
-import { ArrowUpRight, Search, Plus } from 'lucide-react';
+import { ArrowUpRight, Plus } from 'lucide-react';
 import Image from 'next/image';
 
 const categories = ['All', 'Medical', 'Hospitality', 'Real Estate', 'Fashion'];
@@ -83,10 +83,13 @@ export default function WorkPage() {
                             <Tilt className="group flex flex-col h-full rounded-[2.5rem] overflow-hidden glass-card border-white/5 bg-white/5 hover:border-primary/20 transition-all duration-500 relative">
                                 {/* Image Box */}
                                 <div className="aspect-[16/10] overflow-hidden relative">
-                                    <img
+                                    <Image
                                         src={project.image}
                                         alt={project.name}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 opacity-80 group-hover:opacity-100"
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-all duration-700 opacity-80 group-hover:opacity-100"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority={index < 2}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60" />
 
@@ -95,6 +98,18 @@ export default function WorkPage() {
                                         <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-[10px] font-bold uppercase tracking-widest text-primary">
                                             {project.category}
                                         </span>
+                                    </div>
+
+                                    {/* View Original Overlay */}
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/20">
+                                        <a
+                                            href={project.image}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-6 py-2 rounded-full bg-white text-black text-xs font-bold hover:bg-primary hover:text-white transition-all shadow-2xl"
+                                        >
+                                            View Full Size
+                                        </a>
                                     </div>
                                 </div>
 
