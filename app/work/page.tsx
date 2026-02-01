@@ -1,82 +1,130 @@
+'use client';
+
+import { useState } from 'react';
 import FadeIn from '@/components/animations/FadeIn';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import Tilt from '@/components/animations/Tilt';
 import ContactCTA from '@/components/sections/ContactCTA';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Search, Plus } from 'lucide-react';
+import Image from 'next/image';
+
+const categories = ['All', 'Medical', 'Hospitality', 'Real Estate', 'Fashion'];
 
 const projects = [
     {
-        name: 'Nexus FinTech',
-        category: 'Web Engineering',
-        impact: '240% increase in user retention through performance architecture.',
+        name: 'Medicare Premium',
+        category: 'Medical',
+        impact: 'High-performance clinic management and appointment booking ecosystem.',
+        image: '/medicare_template_mockup_1769983023348.png'
     },
     {
-        name: 'Aura Skincare',
-        category: 'Identity & Brand',
-        impact: 'Seamless global rollout with a mobile-first digital identity.',
+        name: 'Aurum Suites',
+        category: 'Hospitality',
+        impact: 'Elegant reservation platform for luxury hotels and premium stays.',
+        image: '/luxury_hotel_template_mockup_1769983038805.png'
     },
     {
-        name: 'Equinox SaaS',
-        category: 'Performance SEO',
-        impact: 'Ranked #1 for high-intent industry keywords in 4 months.',
+        name: 'Luxe Haven Realty',
+        category: 'Real Estate',
+        impact: 'Advanced property discovery system with high-conversion listing layouts.',
+        image: '/real_estate_template_mockup_1769983056524.png'
     },
     {
-        name: 'Lumina Home',
-        category: 'CX Solutions',
-        impact: '98% customer satisfaction rating with automated chat operations.',
-    },
-    {
-        name: 'Vanguard Logistix',
-        category: 'Platform Design',
-        impact: 'Custom real-time tracking dashboard for global fleet operations.',
-    },
-    {
-        name: 'Solaris energy',
-        category: 'Growth Strategy',
-        impact: '10x lead generation growth through integrated organic marketing.',
+        name: 'Elysium Boutique',
+        category: 'Fashion',
+        impact: 'Modern e-commerce architecture for luxury fashion and apparel brands.',
+        image: '/fashion_boutique_template_mockup_1769983070029.png'
     },
 ];
 
 export default function WorkPage() {
+    const [activeCategory, setActiveCategory] = useState('All');
+
+    const filteredProjects = activeCategory === 'All'
+        ? projects
+        : projects.filter(p => p.category === activeCategory);
+
     return (
-        <main className="section-padding">
+        <main className="pt-32">
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
-                <FadeIn className="max-w-5xl mx-auto text-center mb-24">
+                <FadeIn className="max-w-5xl mx-auto text-center mb-20">
                     <span className="inline-block py-1 px-4 rounded-full border border-primary/20 bg-primary/5 text-xs font-medium tracking-widest uppercase text-primary mb-6">
-                        Proven Impact
+                        Ready-to-Deploy Solutions
                     </span>
                     <h1 className="text-fluid-h1 font-bold tracking-tight mb-8">
-                        Digital <span className="text-muted-foreground">Masterpieces.</span>
+                        Industry <span className="text-muted-foreground">Excellence.</span>
                     </h1>
                     <p className="text-fluid-body text-muted-foreground font-light max-w-3xl mx-auto">
-                        We don't just ship projects; we deliver competitive advantages.
-                        A curated selection of ecosystems built to scale.
+                        While we work on showcasing our custom client projects, explore our **Premium Industry Templates**.
+                        Each one is a high-performance ecosystem built to scale your business from day one.
                     </p>
                 </FadeIn>
 
-                <StaggerContainer className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-24">
-                    {projects.map((project, index) => (
-                        <FadeIn key={index}>
-                            <Tilt className="aspect-[4/5] rounded-3xl overflow-hidden glass-card border-white/10 group">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent group-hover:bg-primary/5 transition-colors duration-500" />
+                {/* Category Filter */}
+                <FadeIn delay={0.2} className="flex flex-wrap justify-center gap-4 mb-20">
+                    {categories.map((cat) => (
+                        <button
+                            key={cat}
+                            onClick={() => setActiveCategory(cat)}
+                            className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === cat
+                                ? 'bg-primary border-primary text-white shadow-[0_0_25px_-5px_#10b981]'
+                                : 'border-white/10 text-muted-foreground hover:border-primary/50 hover:text-white'
+                                }`}
+                        >
+                            {cat}
+                        </button>
+                    ))}
+                </FadeIn>
+
+                <StaggerContainer className="grid gap-8 md:grid-cols-2 mb-24">
+                    {filteredProjects.map((project, index) => (
+                        <FadeIn key={project.name}>
+                            <Tilt className="aspect-[16/10] rounded-[2.5rem] overflow-hidden glass-card border-white/5 group relative">
+                                {/* Image Backdrop */}
+                                <div className="absolute inset-0 z-0">
+                                    <img
+                                        src={project.image}
+                                        alt={project.name}
+                                        className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                                </div>
 
                                 {/* Content Overlay */}
-                                <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col justify-end">
-                                    <div className="flex items-center justify-between mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                        <span className="text-xs font-semibold uppercase tracking-widest text-primary">{project.category}</span>
-                                        <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                            <ArrowUpRight className="w-5 h-5" />
+                                <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 z-10">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <span className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-bold uppercase tracking-widest text-primary">
+                                            {project.category}
+                                        </span>
+                                        <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 mobile-reactive">
+                                            <ArrowUpRight className="w-6 h-6" />
                                         </div>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{project.name}</h3>
-                                    <p className="text-sm text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">{project.name}</h3>
+                                    <p className="text-muted-foreground text-lg font-light max-w-lg leading-relaxed">
                                         {project.impact}
                                     </p>
                                 </div>
                             </Tilt>
                         </FadeIn>
                     ))}
+
+                    {/* "Your Project Next" Teaser */}
+                    <FadeIn>
+                        <Tilt className="aspect-[16/10] rounded-[2.5rem] overflow-hidden border border-dashed border-white/10 hover:border-primary/50 transition-colors duration-500 flex flex-col items-center justify-center text-center p-12 group bg-white/5">
+                            <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary transition-all duration-500">
+                                <Plus className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
+                            </div>
+                            <h3 className="text-3xl font-bold mb-4">Your Project Next?</h3>
+                            <p className="text-muted-foreground font-light max-w-sm">
+                                We're ready to build your custom digital masterpiece. Let's start the conversation.
+                            </p>
+                            <Link href="/contact" className="mt-8 px-8 py-3 rounded-full bg-white text-black text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-xl mobile-reactive">
+                                Get Started
+                            </Link>
+                        </Tilt>
+                    </FadeIn>
                 </StaggerContainer>
             </div>
             <ContactCTA />
