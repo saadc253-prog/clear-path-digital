@@ -16,25 +16,25 @@ const projects = [
         name: 'Medicare Premium',
         category: 'Medical',
         impact: 'High-performance clinic management and appointment booking ecosystem.',
-        image: '/medicare_template_mockup_1769983023348.png'
+        image: '/medical.png'
     },
     {
         name: 'Aurum Suites',
         category: 'Hospitality',
         impact: 'Elegant reservation platform for luxury hotels and premium stays.',
-        image: '/luxury_hotel_template_mockup_1769983038805.png'
+        image: '/hotel.png'
     },
     {
         name: 'Luxe Haven Realty',
         category: 'Real Estate',
         impact: 'Advanced property discovery system with high-conversion listing layouts.',
-        image: '/real_estate_template_mockup_1769983056524.png'
+        image: '/real-estate.png'
     },
     {
         name: 'Elysium Boutique',
         category: 'Fashion',
         impact: 'Modern e-commerce architecture for luxury fashion and apparel brands.',
-        image: '/fashion_boutique_template_mockup_1769983070029.png'
+        image: '/fashion.png'
     },
 ];
 
