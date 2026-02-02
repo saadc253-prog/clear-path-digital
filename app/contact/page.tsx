@@ -157,13 +157,13 @@ export default function ContactPage() {
                                         <select
                                             name="subject"
                                             id="subject"
-                                            className="flex h-12 w-full rounded-xl border border-white/5 bg-white/5 px-4 py-2 text-sm text-foreground focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all"
+                                            className="flex h-12 w-full rounded-xl border border-white/5 bg-[#0a0a0a] px-4 py-2 text-sm text-foreground focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all"
                                         >
-                                            <option value="Web Development">Web Development</option>
-                                            <option value="SEO Optimization">SEO Optimization</option>
-                                            <option value="Social Media">Social Media Marketing</option>
-                                            <option value="Graphic Design">Graphic Design</option>
-                                            <option value="CX Solutions">Chat/Call Support</option>
+                                            <option value="Web Development" className="bg-[#0a0a0a] text-white">Web Development</option>
+                                            <option value="SEO Optimization" className="bg-[#0a0a0a] text-white">SEO Optimization</option>
+                                            <option value="Social Media" className="bg-[#0a0a0a] text-white">Social Media Marketing</option>
+                                            <option value="Graphic Design" className="bg-[#0a0a0a] text-white">Graphic Design</option>
+                                            <option value="CX Solutions" className="bg-[#0a0a0a] text-white">Chat/Call Support</option>
                                         </select>
                                     </div>
                                 </div>
