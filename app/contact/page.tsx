@@ -1,16 +1,40 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import FadeIn from '@/components/animations/FadeIn';
 import { Button } from '@/components/ui/Button';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
     Mail, Phone, Send, Loader2, CheckCircle2,
     Globe, Clock, ShieldCheck, ChevronDown,
-    Building2, MessageCircle, Heart, Zap
+    Building2, MessageCircle, Heart, Zap,
+    Check
 } from 'lucide-react';
 
 export default function ContactPage() {
     const [status, setStatus] = useState<'IDLE' | 'SENDING' | 'SUCCESS' | 'ERROR'>('IDLE');
+    const [isSelectOpen, setIsSelectOpen] = useState(false);
+    const [selectedService, setSelectedService] = useState('Web Development');
+    const selectRef = useRef<HTMLDivElement>(null);
+
+    const services = [
+        "Web Development",
+        "SEO Optimization",
+        "Social Media Marketing",
+        "Graphic Design",
+        "Chat/Call Support"
+    ];
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+                setIsSelectOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -20,6 +44,7 @@ export default function ContactPage() {
 
         const formData = new FormData(e.currentTarget);
         formData.append("access_key", ACCESS_KEY);
+        formData.append("service_interested", selectedService); // Add custom selected service
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -144,7 +169,7 @@ export default function ContactPage() {
 
                                 <div className="grid gap-6 md:grid-cols-2">
                                     <div className="space-y-2">
-                                        <label htmlFor="phone" className="text-sm font-medium ml-1">Phone Number <span className="text-muted-foregroundtext-xs">(Optional)</span></label>
+                                        <label htmlFor="phone" className="text-sm font-medium ml-1">Phone Number <span className="text-muted-foreground text-xs">(Optional)</span></label>
                                         <input
                                             name="phone"
                                             id="phone"
@@ -152,19 +177,49 @@ export default function ContactPage() {
                                             placeholder="+00 000 000 000"
                                         />
                                     </div>
-                                    <div className="space-y-2">
-                                        <label htmlFor="subject" className="text-sm font-medium ml-1">Service Interested In</label>
-                                        <select
-                                            name="subject"
-                                            id="subject"
-                                            className="flex h-12 w-full rounded-xl border border-white/5 bg-[#0a0a0a] px-4 py-2 text-sm text-foreground focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all"
+
+                                    {/* Custom Themed Select Dropdown */}
+                                    <div className="space-y-2 relative" ref={selectRef}>
+                                        <label className="text-sm font-medium ml-1">Service Interested In</label>
+                                        <div
+                                            onClick={() => setIsSelectOpen(!isSelectOpen)}
+                                            className="flex h-12 w-full items-center justify-between rounded-xl border border-white/5 bg-white/5 px-4 py-2 text-sm text-foreground cursor-pointer hover:border-primary/30 transition-all select-none"
                                         >
-                                            <option value="Web Development" className="bg-[#0a0a0a] text-white">Web Development</option>
-                                            <option value="SEO Optimization" className="bg-[#0a0a0a] text-white">SEO Optimization</option>
-                                            <option value="Social Media" className="bg-[#0a0a0a] text-white">Social Media Marketing</option>
-                                            <option value="Graphic Design" className="bg-[#0a0a0a] text-white">Graphic Design</option>
-                                            <option value="CX Solutions" className="bg-[#0a0a0a] text-white">Chat/Call Support</option>
-                                        </select>
+                                            <span className={selectedService ? "text-foreground" : "text-muted-foreground"}>
+                                                {selectedService || "Select a service"}
+                                            </span>
+                                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isSelectOpen ? 'rotate-180 text-primary' : ''}`} />
+                                        </div>
+
+                                        <AnimatePresence>
+                                            {isSelectOpen && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: 10 }}
+                                                    className="absolute z-30 top-full left-0 right-0 mt-2 glass-card rounded-2xl border border-white/10 shadow-2xl backdrop-blur-3xl overflow-hidden"
+                                                >
+                                                    <div className="p-2 space-y-1">
+                                                        {services.map((service) => (
+                                                            <div
+                                                                key={service}
+                                                                onClick={() => {
+                                                                    setSelectedService(service);
+                                                                    setIsSelectOpen(false);
+                                                                }}
+                                                                className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-sm cursor-pointer transition-all ${selectedService === service
+                                                                        ? 'bg-primary/20 text-primary font-bold'
+                                                                        : 'text-muted-foreground hover:bg-white/5 hover:text-white'
+                                                                    }`}
+                                                            >
+                                                                {service}
+                                                                {selectedService === service && <Check className="w-4 h-4" />}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                     </div>
                                 </div>
 
