@@ -105,7 +105,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-medium">Email Us</h4>
-                                        <p className="text-muted-foreground font-light">saadc253@gmail.com</p>
+                                        <p className="text-muted-foreground font-light">hello@clearpathdigital.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-6 group">
@@ -208,8 +208,8 @@ export default function ContactPage() {
                                                                     setIsSelectOpen(false);
                                                                 }}
                                                                 className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-sm cursor-pointer transition-all ${selectedService === service
-                                                                        ? 'bg-primary/20 text-primary font-bold'
-                                                                        : 'text-muted-foreground hover:bg-white/5 hover:text-white'
+                                                                    ? 'bg-primary/20 text-primary font-bold'
+                                                                    : 'text-muted-foreground hover:bg-white/5 hover:text-white'
                                                                     }`}
                                                             >
                                                                 {service}
