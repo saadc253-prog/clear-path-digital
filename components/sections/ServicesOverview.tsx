@@ -1,13 +1,10 @@
 'use client';
 
-import { Code, Search, Share2, Palette, MessageSquare, Phone, ArrowUpRight } from 'lucide-react';
+import { Code, Search, Share2, Palette, Bot, Sparkles, ArrowUpRight } from 'lucide-react';
 import FadeIn from '@/components/animations/FadeIn';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import Tilt from '@/components/animations/Tilt';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const SplineIcon = dynamic(() => import('@/components/ui/SplineIcon'), { ssr: false });
 
 const services = [
     {
@@ -16,7 +13,6 @@ const services = [
         icon: Code,
         href: '/services/web-development',
         gridClass: 'md:col-span-2 md:row-span-2',
-        scene: 'https://prod.spline.design/KFonZGtsoUXP-qx7/scene.splinecode', // ✅ Verified: Tech/Code
         color: 'from-violet-500/20'
     },
     {
@@ -25,7 +21,6 @@ const services = [
         icon: Search,
         href: '/services/seo',
         gridClass: 'md:col-span-2 md:row-span-1',
-        scene: 'https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode', // ✅ Verified: Search/Analytics
         color: 'from-cyan-500/20'
     },
     {
@@ -34,7 +29,6 @@ const services = [
         icon: Share2,
         href: '/services/social-media',
         gridClass: 'md:col-span-1 md:row-span-1',
-        scene: 'https://prod.spline.design/Nmx4Vyeze9wJ-9zm/scene.splinecode', // ✅ Verified: Connectivity
         color: 'from-purple-500/20'
     },
     {
@@ -43,25 +37,22 @@ const services = [
         icon: Palette,
         href: '/services/graphic-design',
         gridClass: 'md:col-span-1 md:row-span-1',
-        scene: 'https://prod.spline.design/rOrIdkWtx87vUCw5/scene.splinecode', // ✅ Verified: Design/Creative
         color: 'from-pink-500/20'
     },
     {
-        title: 'Chat Support',
-        description: '24/7 real-time engagement to boost conversion instantly.',
-        icon: MessageSquare,
-        href: '/services/chat-support',
+        title: 'AI Chat Support',
+        description: 'Intelligent 24/7 AI-powered conversations that scale infinitely.',
+        icon: Bot,
+        href: '/services/ai-chat-support',
         gridClass: 'md:col-span-2 md:row-span-1',
-        scene: 'https://prod.spline.design/9951u9cumiw2Ehj8/scene.splinecode', // ✅ Verified: Communication
         color: 'from-teal-500/20'
     },
     {
-        title: 'Call Support',
-        description: 'Professional outbound/inbound handling with global reach.',
-        icon: Phone,
-        href: '/services/call-support',
+        title: 'AI Automation',
+        description: 'Smart workflow automation powered by cutting-edge AI technology.',
+        icon: Sparkles,
+        href: '/services/ai-automation',
         gridClass: 'md:col-span-2 md:row-span-1',
-        scene: 'https://prod.spline.design/KFonZGtsoUXP-qx7/scene.splinecode', // ✅ Verified: Global/Tech
         color: 'from-blue-500/20'
     },
 ];
@@ -98,15 +89,6 @@ export default function ServicesOverview() {
                             <Tilt className="h-full">
                                 <Link href={service.href} className="block h-full group">
                                     <div className={`h-full glass-card p-8 rounded-[2.5rem] transition-all duration-700 hover:bg-white/5 hover:border-primary/30 relative overflow-hidden flex flex-col justify-between bg-gradient-to-br ${service.color} to-transparent`}>
-
-                                        {/* 3D Spline Icon Container */}
-                                        <div className="absolute -right-10 -top-10 w-48 h-48 opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 pointer-events-none">
-                                            {service.scene ? (
-                                                <SplineIcon scene={service.scene} />
-                                            ) : (
-                                                <div className="w-full h-full bg-primary/10 rounded-full blur-xl" />
-                                            )}
-                                        </div>
 
                                         <div className="relative z-10 h-full flex flex-col">
                                             <div className="mb-8 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all duration-500">
