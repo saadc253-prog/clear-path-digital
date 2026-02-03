@@ -16,7 +16,7 @@ const services = [
         icon: Code,
         href: '/services/web-development',
         gridClass: 'md:col-span-2 md:row-span-2',
-        scene: 'https://prod.spline.design/6Wq1S7pCclHhxL9E/scene.splinecode', // Abstract code sphere
+        scene: 'https://prod.spline.design/KFonZGtsoUXP-qx7/scene.splinecode', // ✅ Verified: Tech/Code
         color: 'from-violet-500/20'
     },
     {
@@ -25,7 +25,7 @@ const services = [
         icon: Search,
         href: '/services/seo',
         gridClass: 'md:col-span-2 md:row-span-1',
-        scene: 'https://prod.spline.design/Kz6ZyY8v5-MAnU5C/scene.splinecode', // Scanning magnifier
+        scene: 'https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode', // ✅ Verified: Search/Analytics
         color: 'from-cyan-500/20'
     },
     {
@@ -34,7 +34,7 @@ const services = [
         icon: Share2,
         href: '/services/social-media',
         gridClass: 'md:col-span-1 md:row-span-1',
-        scene: 'https://prod.spline.design/qK6H8uM79uO6fM6g/scene.splinecode', // Connectivity nodes
+        scene: 'https://prod.spline.design/Nmx4Vyeze9wJ-9zm/scene.splinecode', // ✅ Verified: Connectivity
         color: 'from-purple-500/20'
     },
     {
@@ -43,7 +43,7 @@ const services = [
         icon: Palette,
         href: '/services/graphic-design',
         gridClass: 'md:col-span-1 md:row-span-1',
-        scene: 'https://prod.spline.design/v3n5f9i5-MAnU5C/scene.splinecode', // Floating palette
+        scene: 'https://prod.spline.design/rOrIdkWtx87vUCw5/scene.splinecode', // ✅ Verified: Design/Creative
         color: 'from-pink-500/20'
     },
     {
@@ -52,7 +52,7 @@ const services = [
         icon: MessageSquare,
         href: '/services/chat-support',
         gridClass: 'md:col-span-2 md:row-span-1',
-        scene: 'https://prod.spline.design/2G4f4i5-MAnU5C/scene.splinecode', // Chat bubble
+        scene: 'https://prod.spline.design/9951u9cumiw2Ehj8/scene.splinecode', // ✅ Verified: Communication
         color: 'from-teal-500/20'
     },
     {
@@ -61,7 +61,7 @@ const services = [
         icon: Phone,
         href: '/services/call-support',
         gridClass: 'md:col-span-2 md:row-span-1',
-        scene: 'https://prod.spline.design/8v5-MAnU5C/scene.splinecode', // Rotating ring
+        scene: 'https://prod.spline.design/KFonZGtsoUXP-qx7/scene.splinecode', // ✅ Verified: Global/Tech
         color: 'from-blue-500/20'
     },
 ];
@@ -100,8 +100,12 @@ export default function ServicesOverview() {
                                     <div className={`h-full glass-card p-8 rounded-[2.5rem] transition-all duration-700 hover:bg-white/5 hover:border-primary/30 relative overflow-hidden flex flex-col justify-between bg-gradient-to-br ${service.color} to-transparent`}>
 
                                         {/* 3D Spline Icon Container */}
-                                        <div className="absolute -right-10 -top-10 w-48 h-48 opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
-                                            <SplineIcon scene={service.scene} />
+                                        <div className="absolute -right-10 -top-10 w-48 h-48 opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 pointer-events-none">
+                                            {service.scene ? (
+                                                <SplineIcon scene={service.scene} />
+                                            ) : (
+                                                <div className="w-full h-full bg-primary/10 rounded-full blur-xl" />
+                                            )}
                                         </div>
 
                                         <div className="relative z-10 h-full flex flex-col">

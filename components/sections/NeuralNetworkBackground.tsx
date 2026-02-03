@@ -1,40 +1,57 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import * as THREE from 'three';
-// @ts-ignore
-import NET from 'vanta/dist/vanta.net.min';
+import React, { useEffect, useRef } from 'react';
+import * as THREE from '@/lib/three-compat';
 
 const NeuralNetworkBackground = () => {
-    const [vantaEffect, setVantaEffect] = useState<any>(null);
     const vantaRef = useRef<HTMLDivElement>(null);
+    const vantaInstance = useRef<any>(null);
 
     useEffect(() => {
-        if (!vantaEffect && vantaRef.current) {
-            setVantaEffect(
-                NET({
-                    el: vantaRef.current,
-                    THREE: THREE,
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: 200.0,
-                    minWidth: 200.0,
-                    scale: 1.0,
-                    scaleMobile: 1.0,
-                    color: 0x8b5cf6, // Violet
-                    backgroundColor: 0x0f172a, // Deep Midnight Blue
-                    points: 12.0,
-                    maxDistance: 22.0,
-                    spacing: 16.0,
-                    showDots: true,
-                })
-            );
-        }
-        return () => {
-            if (vantaEffect) vantaEffect.destroy();
+        let isMounted = true;
+
+        const initVanta = async () => {
+            try {
+                // @ts-ignore - Vanta is a Legacy library with unconventional exports
+                const vantaModule = await import('vanta/dist/vanta.net.min');
+                const NET = vantaModule.default || vantaModule;
+
+                if (isMounted && vantaRef.current && !vantaInstance.current && typeof NET === 'function') {
+                    vantaInstance.current = NET({
+                        el: vantaRef.current,
+                        THREE: THREE,
+                        mouseControls: true,
+                        touchControls: true,
+                        gyroControls: false,
+                        minHeight: 200.0,
+                        minWidth: 200.0,
+                        scale: 1.0,
+                        scaleMobile: 1.0,
+                        color: 0x8b5cf6, // Vivid Violet
+                        backgroundColor: 0x0f172a, // Deep Midnight Blue
+                        points: 12.0,
+                        maxDistance: 22.0,
+                        spacing: 16.0,
+                        showDots: true,
+                    });
+                }
+            } catch (error) {
+                console.warn('Vanta.js initialization deferred or failed:', error);
+            }
         };
-    }, [vantaEffect]);
+
+        // Delay initialization slightly to ensure canvas readiness and avoid hydration flickers
+        const timer = setTimeout(initVanta, 100);
+
+        return () => {
+            isMounted = false;
+            clearTimeout(timer);
+            if (vantaInstance.current) {
+                vantaInstance.current.destroy();
+                vantaInstance.current = null;
+            }
+        };
+    }, []);
 
     return (
         <div
