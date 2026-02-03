@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import * as THREE from '@/lib/three-compat';
+import * as THREE from 'three';
 
 const NeuralNetworkBackground = () => {
     const vantaRef = useRef<HTMLDivElement>(null);
