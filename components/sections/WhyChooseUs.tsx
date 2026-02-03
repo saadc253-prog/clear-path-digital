@@ -11,11 +11,18 @@ const reasons = [
     'Scalable solutions aligned with your business objectives',
 ];
 
+import dynamic from 'next/dynamic';
+
+const FloatingShapes = dynamic(() => import('./FloatingShapes'), { ssr: false });
+
 export default function WhyChooseUs() {
     return (
         <section className="section-padding bg-slate-900/40 relative overflow-hidden">
+            {/* 3D Floating Geometric Elements */}
+            <FloatingShapes />
+
             {/* Background Decorative Element */}
-            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -z-10" />
+            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -z-20" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">

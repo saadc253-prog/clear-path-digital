@@ -1,89 +1,128 @@
 'use client';
 
-import { Code, Search, Share2, Palette, MessageSquare, Phone } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card';
+import { Code, Search, Share2, Palette, MessageSquare, Phone, ArrowUpRight } from 'lucide-react';
 import FadeIn from '@/components/animations/FadeIn';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import Tilt from '@/components/animations/Tilt';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const SplineIcon = dynamic(() => import('@/components/ui/SplineIcon'), { ssr: false });
 
 const services = [
     {
         title: 'Custom Web Development',
-        description: 'We build fast, secure, and scalable websites using modern technologies like React and Next.js. Our custom web development services focus on performance, user experience, and conversion—helping businesses turn visitors into customers.',
+        description: 'Next-gen performance with React & Next.js. Engineered for speed and scale.',
         icon: Code,
         href: '/services/web-development',
+        gridClass: 'md:col-span-2 md:row-span-2',
+        scene: 'https://prod.spline.design/6Wq1S7pCclHhxL9E/scene.splinecode', // Abstract code sphere
+        color: 'from-violet-500/20'
     },
     {
         title: 'SEO Optimization',
-        description: 'Our SEO services are designed to improve search visibility, organic traffic, and website performance. We use proven on-page, technical, and content SEO strategies to help businesses rank higher and grow sustainably.',
+        description: 'Command search results with data-driven technical SEO.',
         icon: Search,
         href: '/services/seo',
+        gridClass: 'md:col-span-2 md:row-span-1',
+        scene: 'https://prod.spline.design/Kz6ZyY8v5-MAnU5C/scene.splinecode', // Scanning magnifier
+        color: 'from-cyan-500/20'
     },
     {
-        title: 'Social Media Marketing',
-        description: 'We help businesses grow their online presence with data-driven social media marketing strategies. From content creation to campaign management, we ensure consistent engagement and measurable results.',
+        title: 'Social Media',
+        description: 'Building deep community engagement through viral strategy.',
         icon: Share2,
         href: '/services/social-media',
+        gridClass: 'md:col-span-1 md:row-span-1',
+        scene: 'https://prod.spline.design/qK6H8uM79uO6fM6g/scene.splinecode', // Connectivity nodes
+        color: 'from-purple-500/20'
     },
     {
-        title: 'Professional Graphic Design',
-        description: 'We create clean, impactful designs that strengthen brand identity and support marketing efforts. Our graphic design services include branding, social media creatives, and marketing visuals tailored to your business goals.',
+        title: 'Graphic Design',
+        description: 'Premium visual identities that define market leaders.',
         icon: Palette,
         href: '/services/graphic-design',
+        gridClass: 'md:col-span-1 md:row-span-1',
+        scene: 'https://prod.spline.design/v3n5f9i5-MAnU5C/scene.splinecode', // Floating palette
+        color: 'from-pink-500/20'
     },
     {
-        title: '24/7 Live Chat Support',
-        description: 'Our trained live chat support agents help businesses respond instantly to customer inquiries, increase conversions, and improve customer satisfaction across websites and digital platforms.',
+        title: 'Chat Support',
+        description: '24/7 real-time engagement to boost conversion instantly.',
         icon: MessageSquare,
         href: '/services/chat-support',
+        gridClass: 'md:col-span-2 md:row-span-1',
+        scene: 'https://prod.spline.design/2G4f4i5-MAnU5C/scene.splinecode', // Chat bubble
+        color: 'from-teal-500/20'
     },
     {
-        title: 'Outsourced Call Support',
-        description: 'We provide professional inbound and outbound call support services to handle customer queries efficiently, ensuring reliable communication and a positive customer experience.',
+        title: 'Call Support',
+        description: 'Professional outbound/inbound handling with global reach.',
         icon: Phone,
         href: '/services/call-support',
+        gridClass: 'md:col-span-2 md:row-span-1',
+        scene: 'https://prod.spline.design/8v5-MAnU5C/scene.splinecode', // Rotating ring
+        color: 'from-blue-500/20'
     },
 ];
 
 export default function ServicesOverview() {
     return (
-        <section className="section-padding relative overflow-hidden">
-            {/* Gradient Blob - Violet/Cyan Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] h-[150vw] max-w-[800px] max-h-[800px] bg-primary/20 rounded-full blur-3xl -z-10 opacity-30" />
+        <section className="section-padding relative overflow-hidden bg-background">
+            {/* Background Accent Glows */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] -z-10" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] -z-10" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
-                <FadeIn className="mb-24 text-center max-w-4xl mx-auto">
+                <FadeIn className="mb-24 text-left max-w-4xl">
                     <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_#8b5cf6]">
-                        What We Offer
+                        Scale Your Impact
                     </span>
-                    <h2 className="text-fluid-h2 font-bold tracking-tight mb-8">Our Services</h2>
-                    <p className="text-fluid-body text-muted-foreground font-light">
-                        Clear Path Digital helps businesses grow through integrated, high-performance digital solutions
-                        tailored to your unique goals and business objectives.
+                    <h2 className="text-fluid-h2 font-black tracking-tight mb-8 leading-[1]">
+                        Integrated <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Digital Ecosystems.</span>
+                    </h2>
+                    <p className="text-fluid-body text-muted-foreground font-light max-w-2xl">
+                        We don't just provide services—we build the 3D digital infrastructure
+                        that powers consistent growth for modern agencies and startups.
                     </p>
                 </FadeIn>
 
-                <StaggerContainer className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+                <StaggerContainer className="grid gap-6 grid-cols-1 md:grid-cols-4 auto-rows-fr">
                     {services.map((service, index) => (
                         <FadeIn
                             key={service.title}
                             delay={index * 0.1}
-                            className="group"
+                            className={service.gridClass}
                         >
-                            <Tilt className="h-full mobile-reactive">
-                                <Link href={service.href} className="block h-full">
-                                    <div className="h-full glass-card p-8 rounded-[2rem] transition-all duration-500 hover:bg-white/5 hover:border-primary/30 hover:shadow-[0_0_30px_-10px_rgba(139,92,246,0.3)] border border-white/5 bg-gradient-to-b from-white/5 to-transparent">
-                                        <div className="mb-6 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-500">
-                                            <service.icon className="h-6 w-6" />
+                            <Tilt className="h-full">
+                                <Link href={service.href} className="block h-full group">
+                                    <div className={`h-full glass-card p-8 rounded-[2.5rem] transition-all duration-700 hover:bg-white/5 hover:border-primary/30 relative overflow-hidden flex flex-col justify-between bg-gradient-to-br ${service.color} to-transparent`}>
+
+                                        {/* 3D Spline Icon Container */}
+                                        <div className="absolute -right-10 -top-10 w-48 h-48 opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                                            <SplineIcon scene={service.scene} />
                                         </div>
-                                        <h3 className="text-2xl font-bold mb-3 tracking-tight group-hover:text-primary transition-colors">{service.title}</h3>
-                                        <p className="text-muted-foreground font-light text-base leading-relaxed mb-6">
-                                            {service.description}
-                                        </p>
-                                        <div className="flex items-center text-sm font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
-                                            Learn more <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+
+                                        <div className="relative z-10 h-full flex flex-col">
+                                            <div className="mb-8 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all duration-500">
+                                                <service.icon className="h-6 w-6" />
+                                            </div>
+
+                                            <div className="mt-auto">
+                                                <h3 className="text-2xl font-black mb-3 tracking-tight group-hover:text-primary transition-colors">{service.title}</h3>
+                                                <p className="text-muted-foreground font-light text-base leading-relaxed mb-6 line-clamp-2 md:line-clamp-none">
+                                                    {service.description}
+                                                </p>
+
+                                                <div className="flex items-center text-sm font-bold uppercase tracking-widest text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                                    Deploy Solution <ArrowUpRight className="ml-2 w-4 h-4" />
+                                                </div>
+                                            </div>
                                         </div>
+
+                                        {/* Subtle Rim Light */}
+                                        <div className="absolute inset-0 border border-white/5 group-hover:border-primary/20 rounded-[2.5rem] pointer-events-none transition-colors duration-700" />
                                     </div>
                                 </Link>
                             </Tilt>

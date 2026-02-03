@@ -6,15 +6,20 @@ import { Button } from '@/components/ui/Button';
 import FadeIn from '@/components/animations/FadeIn';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+const NeuralNetworkBackground = dynamic(() => import('./NeuralNetworkBackground'), { ssr: false });
 
 export default function Hero() {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32 pb-20 bg-background">
-            {/* Dynamic Mesh Gradient Background */}
-            <div className="absolute inset-0 -z-10">
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/10 rounded-full blur-[100px] animate-pulse delay-700" />
-                <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-primary/10 rounded-full blur-[80px]" />
+            {/* Interactive Neural Network Background */}
+            <NeuralNetworkBackground />
+
+            {/* Subtle Gradient Overlays for Rim Lighting */}
+            <div className="absolute inset-0 -z-10 pointer-events-none">
+                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px]" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[100px]" />
             </div>
 
             {/* Decorative Grid Overlay */}
