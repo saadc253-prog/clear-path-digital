@@ -36,42 +36,42 @@ export default function Navbar() {
             description: 'Custom high-performance websites.',
             href: '/services/web-development',
             icon: <Code className="w-5 h-5" />,
-            color: 'text-blue-400'
+            color: 'text-accent'
         },
         {
             title: 'SEO Optimization',
             description: 'Dominating organic search results.',
             href: '/services/seo',
             icon: <Search className="w-5 h-5" />,
-            color: 'text-emerald-400'
+            color: 'text-accent'
         },
         {
             title: 'Social Media',
             description: 'Engaging your loyal community.',
             href: '/services/social-media',
             icon: <Share2 className="w-5 h-5" />,
-            color: 'text-purple-400'
+            color: 'text-primary'
         },
         {
             title: 'Graphic Design',
             description: 'Premium visual brand identity.',
             href: '/services/graphic-design',
             icon: <Palette className="w-5 h-5" />,
-            color: 'text-pink-400'
+            color: 'text-primary'
         },
         {
             title: 'Call Support',
             description: 'Elite professional call handling.',
             href: '/services/call-support',
             icon: <Phone className="w-5 h-5" />,
-            color: 'text-orange-400'
+            color: 'text-primary'
         },
         {
             title: 'Chat Support',
             description: '24/7 real-time visitor engagement.',
             href: '/services/chat-support',
             icon: <MessageSquare className="w-5 h-5" />,
-            color: 'text-teal-400'
+            color: 'text-accent'
         }
     ];
 

@@ -68,7 +68,7 @@ export default function WorkPage() {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === cat
-                                ? 'bg-primary border-primary text-white shadow-[0_0_25px_-5px_#10b981]'
+                                ? 'bg-primary border-primary text-white shadow-[0_0_25px_-5px_#8b5cf6]'
                                 : 'border-white/10 text-muted-foreground hover:border-primary/50 hover:text-white'
                                 }`}
                         >
@@ -141,7 +141,7 @@ export default function WorkPage() {
                             <p className="text-muted-foreground font-light max-w-sm">
                                 We're ready to build your custom digital masterpiece. Let's start the conversation.
                             </p>
-                            <Link href="/contact" className="mt-8 px-8 py-3 rounded-full bg-white text-black text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-xl mobile-reactive">
+                            <Link href="/contact" className="mt-8 px-8 py-3 rounded-full bg-white text-black text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-xl shadow-primary/10 mobile-reactive">
                                 Get Started
                             </Link>
                         </Tilt>

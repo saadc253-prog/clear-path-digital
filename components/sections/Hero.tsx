@@ -12,9 +12,9 @@ export default function Hero() {
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32 pb-20 bg-background">
             {/* Dynamic Mesh Gradient Background */}
             <div className="absolute inset-0 -z-10">
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px] animate-pulse" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-500/5 rounded-full blur-[100px] animate-pulse delay-700" />
-                <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-blue-500/5 rounded-full blur-[80px]" />
+                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/10 rounded-full blur-[100px] animate-pulse delay-700" />
+                <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-primary/10 rounded-full blur-[80px]" />
             </div>
 
             {/* Decorative Grid Overlay */}
@@ -36,7 +36,7 @@ export default function Hero() {
                             <FadeIn>
                                 <h1 className="text-fluid-h1 font-black tracking-tight text-foreground leading-[1] md:leading-[0.9]">
                                     Engineered to <br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-white animate-gradient">Scale Your Business.</span>
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-white animate-gradient">Scale Your Business.</span>
                                 </h1>
                             </FadeIn>
 
@@ -45,7 +45,7 @@ export default function Hero() {
                             </FadeIn>
 
                             <FadeIn className="flex flex-col sm:flex-row gap-6 pt-6 w-full sm:w-auto">
-                                <Button size="lg" asChild className="group bg-primary text-white hover:bg-primary-hover shadow-[0_0_40px_-10px_#10b981] px-8 py-7 text-lg rounded-2xl w-full sm:w-auto">
+                                <Button size="lg" asChild className="group bg-primary text-white hover:bg-primary-hover shadow-[0_0_40px_-10px_var(--primary)] px-8 py-7 text-lg rounded-2xl w-full sm:w-auto">
                                     <Link href="/contact">
                                         Start Your Project
                                         <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -82,7 +82,7 @@ export default function Hero() {
                             <motion.div
                                 animate={{ rotate: 360 }}
                                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                                className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-emerald-500/20 rounded-full blur-3xl opacity-30"
+                                className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-accent/20 rounded-full blur-3xl opacity-30"
                             />
                             <div className="absolute inset-4 glass-card rounded-[3rem] border-white/10 flex items-center justify-center overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />

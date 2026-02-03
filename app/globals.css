@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #020617;
-  /* Deep Slate */
+  --color-background: #0f172a;
+  /* Deep Midnight Blue */
   --color-foreground: #f8fafc;
-  /* Slate 50 */
+  /* Ghost White */
 
-  --color-primary: #10b981;
-  /* Emerald 500 */
+  --color-primary: #8b5cf6;
+  /* Vivid Violet */
   --color-primary-foreground: #ffffff;
 
   --color-muted: #1e293b;
@@ -15,9 +15,9 @@
   --color-muted-foreground: #94a3b8;
   /* Slate 400 */
 
-  --color-accent: #0f172a;
-  /* Slate 900 */
-  --color-accent-foreground: #10b981;
+  --color-accent: #06b6d4;
+  /* Electric Cyan */
+  --color-accent-foreground: #0f172a;
 
   --color-border: #1e293b;
 
@@ -31,23 +31,23 @@
 }
 
 :root {
-  --background: #020617;
-  /* Deep Slate */
+  --background: #0f172a;
   --foreground: #f8fafc;
   --card: #010413;
   --card-foreground: #f8fafc;
   --popover: #010413;
   --popover-foreground: #f8fafc;
-  --primary: #10b981;
-  /* Emerald Green */
+  --primary: #8b5cf6;
+  /* Violet */
   --primary-foreground: #ffffff;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
-  --accent: #0f172a;
-  --accent-foreground: #10b981;
+  --accent: #06b6d4;
+  /* Cyan */
+  --accent-foreground: #0f172a;
   --border: #1e293b;
   --input: #1e293b;
-  --ring: #10b981;
+  --ring: #8b5cf6;
 }
 
 html,
@@ -68,14 +68,14 @@ body {
 
 /* Glassmorphism Utilities */
 .glass {
-  background: rgba(2, 6, 23, 0.7);
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-card {
-  background: rgba(2, 6, 23, 0.4);
+  background: rgba(15, 23, 42, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -122,8 +122,9 @@ body {
   width: 8px;
 }
 
+/* Deep Midnight Scrollbar Track */
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -132,7 +133,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
+  background: #8b5cf6;
 }
 
 /* Lenis Smooth Scroll */

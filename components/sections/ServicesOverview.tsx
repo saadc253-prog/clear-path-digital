@@ -49,12 +49,12 @@ const services = [
 export default function ServicesOverview() {
     return (
         <section className="section-padding relative overflow-hidden">
-            {/* Gradient Blob - Emerald */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] h-[150vw] max-w-[800px] max-h-[800px] bg-primary/10 rounded-full blur-3xl -z-10 opacity-30" />
+            {/* Gradient Blob - Violet/Cyan Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] h-[150vw] max-w-[800px] max-h-[800px] bg-primary/20 rounded-full blur-3xl -z-10 opacity-30" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <FadeIn className="mb-24 text-center max-w-4xl mx-auto">
-                    <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_#10b981]">
+                    <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_#8b5cf6]">
                         What We Offer
                     </span>
                     <h2 className="text-fluid-h2 font-bold tracking-tight mb-8">Our Services</h2>
@@ -73,7 +73,7 @@ export default function ServicesOverview() {
                         >
                             <Tilt className="h-full mobile-reactive">
                                 <Link href={service.href} className="block h-full">
-                                    <div className="h-full glass-card p-8 rounded-[2rem] transition-all duration-500 hover:bg-white/5 hover:border-primary/30 hover:shadow-[0_0_30px_-10px_rgba(16,185,129,0.2)] border border-white/5 bg-gradient-to-b from-white/5 to-transparent">
+                                    <div className="h-full glass-card p-8 rounded-[2rem] transition-all duration-500 hover:bg-white/5 hover:border-primary/30 hover:shadow-[0_0_30px_-10px_rgba(139,92,246,0.3)] border border-white/5 bg-gradient-to-b from-white/5 to-transparent">
                                         <div className="mb-6 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-500">
                                             <service.icon className="h-6 w-6" />
                                         </div>

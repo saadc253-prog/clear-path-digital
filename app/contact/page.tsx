@@ -136,7 +136,7 @@ export default function ContactPage() {
                                     <CheckCircle2 className="w-16 h-16 text-primary mb-6 animate-bounce" />
                                     <h3 className="text-3xl font-bold mb-2">Message Sent!</h3>
                                     <p className="text-muted-foreground mb-8">We've received your request and will be in touch shortly.</p>
-                                    <Button onClick={() => setStatus('IDLE')} variant="outline" className="rounded-full px-8">Send Another</Button>
+                                    <Button onClick={() => setStatus('IDLE')} variant="outline" className="rounded-full px-8 border-primary/20 hover:bg-primary/10">Send Another</Button>
                                 </FadeIn>
                             )}
 
@@ -237,7 +237,7 @@ export default function ContactPage() {
                                 <Button
                                     type="submit"
                                     disabled={status === 'SENDING'}
-                                    className="w-full h-14 text-lg rounded-full bg-primary text-white hover:bg-primary/90 font-semibold shadow-[0_0_30px_-10px_#10b981] disabled:opacity-50"
+                                    className="w-full h-14 text-lg rounded-full bg-primary text-white hover:bg-primary/90 font-semibold shadow-[0_0_30px_-10px_#8b5cf6] disabled:opacity-50"
                                 >
                                     {status === 'SENDING' ? (
                                         <>

@@ -17,14 +17,14 @@ const stats = [
         value: '100%',
         description: 'Committed to delivering measurable results and exceptional service.',
         icon: Award,
-        color: 'text-emerald-400'
+        color: 'text-accent'
     },
     {
         label: 'Global Support',
         value: '24/7',
         description: 'Reliable customer service and project management across time zones.',
         icon: Globe,
-        color: 'text-blue-400'
+        color: 'text-primary'
     },
     {
         label: 'Expert Team',
@@ -39,7 +39,7 @@ export default function BrandImpact() {
     return (
         <section className="section-padding bg-white/5 border-y border-white/5 relative overflow-hidden">
             {/* Background glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/20 blur-[120px] pointer-events-none" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto relative z-10">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

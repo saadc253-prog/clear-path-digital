@@ -15,12 +15,12 @@ export default function WhyChooseUs() {
     return (
         <section className="section-padding bg-slate-900/40 relative overflow-hidden">
             {/* Background Decorative Element */}
-            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10" />
+            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -z-10" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <FadeIn>
-                        <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_#10b981]">
+                        <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_#8b5cf6]">
                             Why Choose Us
                         </span>
                         <h2 className="text-fluid-h2 font-bold tracking-tight mb-8">Elevating Your <br /> <span className="text-muted-foreground">Digital Authority.</span></h2>
