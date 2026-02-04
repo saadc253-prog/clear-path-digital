@@ -79,7 +79,7 @@ export default function ServicesOverview() {
                     </p>
                 </FadeIn>
 
-                <StaggerContainer className="grid gap-6 grid-cols-1 md:grid-cols-4 auto-rows-fr">
+                <StaggerContainer className="grid gap-4 grid-cols-1 md:grid-cols-4 auto-rows-fr">
                     {services.map((service, index) => (
                         <FadeIn
                             key={service.title}
