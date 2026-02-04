@@ -6,7 +6,7 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import Logo from '@/components/ui/Logo';
 import {
     Menu, X, ChevronDown, Code, Search,
-    Share2, Palette, Phone, MessageSquare,
+    Share2, Palette, Bot, Sparkles,
     ArrowRight
 } from 'lucide-react';
 
@@ -60,17 +60,17 @@ export default function Navbar() {
             color: 'text-primary'
         },
         {
-            title: 'Call Support',
-            description: 'Elite professional call handling.',
-            href: '/services/call-support',
-            icon: <Phone className="w-5 h-5" />,
+            title: 'AI Chat Support',
+            description: 'Intelligent 24/7 AI conversations.',
+            href: '/services/ai-chat-support',
+            icon: <Bot className="w-5 h-5" />,
             color: 'text-primary'
         },
         {
-            title: 'Chat Support',
-            description: '24/7 real-time visitor engagement.',
-            href: '/services/chat-support',
-            icon: <MessageSquare className="w-5 h-5" />,
+            title: 'AI Automation',
+            description: 'Smart workflow automation.',
+            href: '/services/ai-automation',
+            icon: <Sparkles className="w-5 h-5" />,
             color: 'text-accent'
         }
     ];

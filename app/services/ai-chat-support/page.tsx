@@ -51,27 +51,43 @@ export default function AIChatSupportPage() {
         },
         {
             title: 'Multilingual Support',
-            description: 'Communicate with customers in 100+ languages automatically, breaking down global barriers.',
+            description: 'Communicate with customers in 100+ languages automatically, breaking down global barriers with real-time translation.',
             icon: <Globe className="w-6 h-6" />
         },
         {
             title: 'Lead Qualification',
-            description: 'AI-powered lead scoring and qualification that identifies high-value prospects and routes them appropriately.',
+            description: 'AI-powered lead scoring and qualification that identifies high-value prospects and routes them to sales teams with context.',
             icon: <TrendingUp className="w-6 h-6" />
         },
         {
             title: 'Seamless Handoff',
-            description: 'Smart escalation to human agents when needed, with full conversation context preserved.',
+            description: 'Smart escalation to human agents when needed, with full conversation context, sentiment analysis, and ticket creation.',
             icon: <Users className="w-6 h-6" />
+        },
+        {
+            title: 'Sentiment Analysis',
+            description: 'Real-time emotion detection to identify frustrated customers and adjust responses or escalate proactively.',
+            icon: <Smile className="w-6 h-6" />
+        },
+        {
+            title: 'Knowledge Base Integration',
+            description: 'Instantly access and surface relevant documentation, FAQs, and product information from your knowledge bases.',
+            icon: <Database className="w-6 h-6" />
+        },
+        {
+            title: 'Proactive Engagement',
+            description: 'AI initiates conversations based on user behavior patterns, reducing cart abandonment and boosting conversions.',
+            icon: <CheckCircle2 className="w-6 h-6" />
         }
     ];
 
     const valueProps = [
-        'Advanced GPT-4 powered conversational AI',
-        'Instant responses with 99.9% uptime guarantee',
-        'Custom training on your brand and products',
-        'Unlimited scalability without additional costs',
-        'Real-time analytics and performance insights'
+        'Advanced GPT-4o powered conversational AI with 95%+ accuracy',
+        'Reduce support costs by 80% with instant automated responses',
+        'Custom training on your specific brand voice, products, and policies',
+        'Handle unlimited simultaneous conversations at no extra cost',
+        'Real-time analytics dashboard with CSAT, resolution time, and ROI tracking',
+        'Average 30-second response time vs 5-minute industry standard'
     ];
 
     const industries = [

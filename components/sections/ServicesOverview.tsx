@@ -12,7 +12,7 @@ const services = [
         description: 'Next-gen performance with React & Next.js. Engineered for speed and scale.',
         icon: Code,
         href: '/services/web-development',
-        gridClass: 'md:col-span-2 md:row-span-2',
+        gridClass: 'md:col-span-2',
         color: 'from-violet-500/20'
     },
     {
@@ -20,7 +20,7 @@ const services = [
         description: 'Command search results with data-driven technical SEO.',
         icon: Search,
         href: '/services/seo',
-        gridClass: 'md:col-span-2 md:row-span-1',
+        gridClass: 'md:col-span-2',
         color: 'from-cyan-500/20'
     },
     {
@@ -28,7 +28,7 @@ const services = [
         description: 'Building deep community engagement through viral strategy.',
         icon: Share2,
         href: '/services/social-media',
-        gridClass: 'md:col-span-1 md:row-span-1',
+        gridClass: 'md:col-span-2',
         color: 'from-purple-500/20'
     },
     {
@@ -36,7 +36,7 @@ const services = [
         description: 'Premium visual identities that define market leaders.',
         icon: Palette,
         href: '/services/graphic-design',
-        gridClass: 'md:col-span-1 md:row-span-1',
+        gridClass: 'md:col-span-2',
         color: 'from-pink-500/20'
     },
     {
@@ -44,7 +44,7 @@ const services = [
         description: 'Intelligent 24/7 AI-powered conversations that scale infinitely.',
         icon: Bot,
         href: '/services/ai-chat-support',
-        gridClass: 'md:col-span-2 md:row-span-1',
+        gridClass: 'md:col-span-2',
         color: 'from-teal-500/20'
     },
     {
@@ -52,7 +52,7 @@ const services = [
         description: 'Smart workflow automation powered by cutting-edge AI technology.',
         icon: Sparkles,
         href: '/services/ai-automation',
-        gridClass: 'md:col-span-2 md:row-span-1',
+        gridClass: 'md:col-span-2',
         color: 'from-blue-500/20'
     },
 ];

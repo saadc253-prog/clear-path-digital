@@ -40,37 +40,53 @@ export default function AIAutomationPage() {
     const benefits = [
         {
             title: 'Intelligent Workflow Automation',
-            description: 'AI-powered automation that handles complex decision-making, not just simple if-then rules.',
+            description: 'AI-powered automation that handles complex decision-making, not just simple if-then rules. Adapts to edge cases automatically.',
             icon: <Workflow className="w-6 h-6" />
         },
         {
             title: 'Data Processing & Analysis',
-            description: 'Automatically extract, transform, and analyze data from multiple sources with AI precision.',
+            description: 'Automatically extract, transform, and analyze data from multiple sources with AI precision. Real-time data syncing across platforms.',
             icon: <Database className="w-6 h-6" />
         },
         {
             title: 'Smart Document Processing',
-            description: 'AI that reads, understands, and processes invoices, contracts, and forms automatically.',
+            description: 'AI that reads, understands, and processes invoices, contracts, and forms automatically with 99.7% accuracy.',
             icon: <Cpu className="w-6 h-6" />
         },
         {
             title: 'Predictive Analytics',
-            description: 'Forecast trends, identify patterns, and make data-driven decisions with AI-powered insights.',
+            description: 'Forecast trends, identify patterns, and make data-driven decisions with AI-powered insights and machine learning models.',
             icon: <BarChart3 className="w-6 h-6" />
         },
         {
             title: 'Integration Ecosystem',
-            description: 'Connect 1000+ apps and services seamlessly - from Salesforce to Slack to custom APIs.',
+            description: 'Connect 1000+ apps and services seamlessly - from Salesforce to Slack to custom APIs. No-code visual workflow builder.',
             icon: <RefreshCw className="w-6 h-6" />
+        },
+        {
+            title: 'Email Automation',
+            description: 'Smart email categorization, auto-responses, and intelligent routing based on content analysis and sentiment.',
+            icon: <Zap className="w-6 h-6" />
+        },
+        {
+            title: 'CRM Synchronization',
+            description: 'Automatic contact updates, deal tracking, and pipeline management across Salesforce, HubSpot, and custom CRMs.',
+            icon: <TrendingUp className="w-6 h-6" />
+        },
+        {
+            title: 'Custom API Workflows',
+            description: 'Build sophisticated multi-step automations with webhooks, REST APIs, and custom business logic tailored to your needs.',
+            icon: <Shield className="w-6 h-6" />
         }
     ];
 
     const valueProps = [
-        'Reduce manual work by up to 90%',
-        'Eliminate human errors in repetitive tasks',
-        'Scale operations without hiring more staff',
-        '24/7 automated processing with zero downtime',
-        'ROI typically achieved within 3-6 months'
+        'Reduce manual work by up to 90% - save 20-30 hours per week per employee',
+        'Eliminate 99.7% of human errors in repetitive tasks',
+        'Scale operations 10x without proportional headcount growth',
+        '24/7 automated processing with 99.9% uptime SLA',
+        'Average ROI of 400% achieved within 3-6 months',
+        'Process 1000+ tasks per day that previously required full-time staff'
     ];
 
     const industries = [
