@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Logo from '@/components/ui/Logo';
+import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
 
 const footerLinks = {
     services: [
@@ -7,17 +8,17 @@ const footerLinks = {
         { name: 'SEO Optimization', href: '/services/seo' },
         { name: 'Social Media', href: '/services/social-media' },
         { name: 'Graphic Design', href: '/services/graphic-design' },
+        { name: 'AI Chat Support', href: '/services/ai-chat-support' },
+        { name: 'AI Automation', href: '/services/ai-automation' },
     ],
     company: [
         { name: 'About Us', href: '/about' },
-        { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' },
-        { name: 'Privacy Policy', href: '/privacy' },
     ],
     social: [
-        { name: 'Twitter', href: '#' },
-        { name: 'LinkedIn', href: '#' },
-        { name: 'Instagram', href: '#' },
+        { name: 'Facebook', href: 'https://www.facebook.com/people/Clear-Path-Digital/61587284444357/', icon: Facebook },
+        { name: 'Instagram', href: 'https://www.instagram.com/clearpathaibots/', icon: Instagram },
+        { name: 'LinkedIn', href: 'https://www.linkedin.com/company/clear-path-digital', icon: Linkedin },
     ],
 };
 
@@ -30,9 +31,13 @@ export default function Footer() {
                         <Link href="/" className="inline-block mb-4">
                             <Logo />
                         </Link>
-                        <p className="text-sm text-muted-foreground">
-                            Clear Path Digital provides web development, SEO services, social media marketing, graphic design, live chat support, and call support services for businesses worldwide.
+                        <p className="text-sm text-muted-foreground mb-4">
+                            Clear Path Digital provides AI-powered solutions including web development, SEO, social media, graphic design, AI chat support, and automation for businesses worldwide.
                         </p>
+                        <a href="mailto:saad@clearpathaibots.com" className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
+                            <Mail className="w-4 h-4" />
+                            saad@clearpathaibots.com
+                        </a>
                     </div>
 
                     <div>
@@ -62,11 +67,17 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Connect</h3>
+                        <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Follow Us</h3>
                         <ul className="mt-4 space-y-4">
                             {footerLinks.social.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.href} className="text-base text-muted-foreground hover:text-primary transition-colors">
+                                    <Link
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-3 text-base text-muted-foreground hover:text-primary transition-colors group"
+                                    >
+                                        <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                         {item.name}
                                     </Link>
                                 </li>
@@ -83,3 +94,4 @@ export default function Footer() {
         </footer>
     );
 }
+

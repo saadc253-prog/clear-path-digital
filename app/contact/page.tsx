@@ -5,10 +5,9 @@ import FadeIn from '@/components/animations/FadeIn';
 import { Button } from '@/components/ui/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-    Mail, Phone, Send, Loader2, CheckCircle2,
-    Globe, Clock, ShieldCheck, ChevronDown,
-    Building2, MessageCircle, Heart, Zap,
-    Check
+    Mail, Send, Loader2, CheckCircle2,
+    Globe, Clock, ChevronDown,
+    Check, Facebook, Instagram, Linkedin
 } from 'lucide-react';
 
 export default function ContactPage() {
@@ -22,7 +21,8 @@ export default function ContactPage() {
         "SEO Optimization",
         "Social Media Marketing",
         "Graphic Design",
-        "Chat/Call Support"
+        "AI Chat Support",
+        "AI Automation"
     ];
 
     // Close dropdown when clicking outside
@@ -105,16 +105,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-medium">Email Us</h4>
-                                        <p className="text-muted-foreground font-light">hello@clearpathdigital.com</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-6 group">
-                                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                                        <Phone className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-lg font-medium">Phone Support</h4>
-                                        <p className="text-muted-foreground font-light">+1 (555) POWER-UP</p>
+                                        <a href="mailto:saad@clearpathaibots.com" className="text-muted-foreground font-light hover:text-primary transition-colors">saad@clearpathaibots.com</a>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-6 group">
@@ -124,6 +115,25 @@ export default function ContactPage() {
                                     <div>
                                         <h4 className="text-lg font-medium">Availability</h4>
                                         <p className="text-muted-foreground font-light italic">24/7 Digital Support Available</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-6 group">
+                                    <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                                        <Globe className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-medium mb-2">Follow Us</h4>
+                                        <div className="flex items-center gap-4">
+                                            <a href="https://www.facebook.com/people/Clear-Path-Digital/61587284444357/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                                <Facebook className="w-5 h-5" />
+                                            </a>
+                                            <a href="https://www.instagram.com/clearpathaibots/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                                <Instagram className="w-5 h-5" />
+                                            </a>
+                                            <a href="https://www.linkedin.com/company/clear-path-digital" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                                <Linkedin className="w-5 h-5" />
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
