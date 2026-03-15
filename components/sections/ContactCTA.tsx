@@ -18,19 +18,21 @@ export default function ContactCTA() {
                     <div className="absolute -left-20 -bottom-20 w-96 h-96 border border-white/5 rounded-full z-0" />
 
                     <h2 className="text-fluid-h2 font-bold tracking-tighter mb-8 relative z-10">
-                        Ready to Grow Your Business <span className="text-primary drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">Online?</span>
+                        Ready to Scale Your Business with <span className="text-primary drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">Smart Digital Solutions?</span>
                     </h2>
-                    <p className="text-fluid-body text-muted-foreground max-w-3xl mx-auto mb-12 font-light relative z-10">
-                        Whether you need a high-converting website, improved search rankings, or reliable customer support services, Clear Path Digital is here to help.
+                    <p className="text-fluid-body text-muted-foreground max-w-3xl mx-auto mb-8 font-light relative z-10">
+                        Partner with Clear Path Digital to build faster websites, improve search visibility, automate customer support, and deliver better customer experiences.
                     </p>
-                    <Button size="lg" asChild className="relative z-10 group bg-white text-black hover:bg-white/90 shadow-xl w-full max-w-sm mx-auto min-[400px]:w-auto border-none">
+                    <Button size="lg" asChild className="relative z-10 group bg-white text-black hover:bg-white/90 shadow-xl w-full max-w-sm mx-auto min-[400px]:w-auto border-none mb-4">
                         <Link href="/contact">
-                            Request a Free Consultation
+                            Book Your Free Consultation
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </Button>
+                    <p className="text-sm text-muted-foreground/60 relative z-10">Strategy call takes only 20 minutes. No commitment required.</p>
                 </FadeIn>
             </div>
         </section>
     );
 }
+

@@ -11,18 +11,16 @@ export default function AboutSummary() {
                         <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_#8b5cf6]">
                             About Clear Path Digital
                         </span>
-                        <h2 className="text-fluid-h2 font-bold tracking-tight mb-8">Partnering for <br /> <span className="text-muted-foreground">Digital Success.</span></h2>
+                        <h2 className="text-fluid-h2 font-bold tracking-tight mb-8">Partnering for <br /> <span className="text-muted-foreground">Measurable Digital Growth.</span></h2>
                         <div className="space-y-6 text-fluid-body text-muted-foreground font-light leading-relaxed">
                             <p>
-                                Clear Path Digital is a full-service digital agency providing high-performance web development, SEO,
-                                social media marketing, graphic design, and customer support services to businesses worldwide.
+                                Clear Path Digital is a digital growth agency providing custom web development, SEO services, social media marketing, graphic design, AI chat support, and business automation solutions for startups and businesses worldwide.
                             </p>
                             <p>
-                                We partner with startups, agencies, and established companies looking for reliable digital solutions
-                                that drive growth, improve efficiency, and support long-term success.
+                                We partner with founders, startups, and scaling companies looking for reliable digital solutions that drive growth, improve efficiency, and deliver consistent long-term results.
                             </p>
                             <p className="text-primary font-medium">
-                                Our approach is simple: understand your goals, execute with precision, and continuously optimize for better results.
+                                Our approach is simple: understand your goals, build a strategy, execute with precision, and continuously optimize for better outcomes.
                             </p>
                         </div>
                     </FadeIn>
@@ -34,3 +32,4 @@ export default function AboutSummary() {
         </section>
     );
 }
+

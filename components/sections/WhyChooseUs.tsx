@@ -4,11 +4,11 @@ import FadeIn from '@/components/animations/FadeIn';
 import { CheckCircle2 } from 'lucide-react';
 
 const reasons = [
-    'Results-focused digital marketing and development solutions',
-    'Affordable services for startups and growing businesses',
-    'Skilled team across marketing, development, and support',
-    'Clear communication and transparent processes',
-    'Scalable solutions aligned with your business objectives',
+    'Results-focused digital strategies — not just activity metrics',
+    'Skilled team across development, marketing, AI, and support',
+    'Transparent communication and detailed progress reporting',
+    'Scalable solutions designed for startups and growing businesses',
+    'Global service delivery with a personalized, hands-on approach',
 ];
 
 import dynamic from 'next/dynamic';
@@ -30,10 +30,9 @@ export default function WhyChooseUs() {
                         <span className="inline-block py-1.5 px-6 rounded-full border border-primary/20 bg-primary/5 text-sm font-semibold tracking-widest uppercase text-primary mb-8 shadow-[0_0_15px_-5px_#8b5cf6]">
                             Why Choose Us
                         </span>
-                        <h2 className="text-fluid-h2 font-bold tracking-tight mb-8">Elevating Your <br /> <span className="text-muted-foreground">Digital Authority.</span></h2>
+                        <h2 className="text-fluid-h2 font-bold tracking-tight mb-8">Why Businesses Choose <br /> <span className="text-muted-foreground">Clear Path Digital</span></h2>
                         <p className="text-fluid-body text-muted-foreground font-light mb-12">
-                            We don't just provide services—we build the digital architecture that powers your business growth.
-                            Our commitment to precision and outcome-driven strategies sets us apart.
+                            We focus on delivering measurable outcomes — not just digital activity. Our team combines technical expertise, creative strategy, and data-driven execution to help your business grow consistently.
                         </p>
                     </FadeIn>
 
@@ -41,7 +40,7 @@ export default function WhyChooseUs() {
                         <div className="space-y-6">
                             {reasons.map((reason, index) => (
                                 <div key={index} className="flex items-start gap-4 group">
-                                    <div className="mt-1 w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                    <div className="mt-1 w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shrink-0">
                                         <CheckCircle2 className="w-4 h-4" />
                                     </div>
                                     <p className="text-lg text-foreground/80 font-light group-hover:text-white transition-colors">
@@ -56,3 +55,4 @@ export default function WhyChooseUs() {
         </section>
     );
 }
+
