@@ -44,7 +44,9 @@ export default function ContactPage() {
 
         const formData = new FormData(e.currentTarget);
         formData.append("access_key", ACCESS_KEY);
-        formData.append("service_interested", selectedService); // Add custom selected service
+        formData.append("service_interested", selectedService);
+        formData.append("from_name", "Clear Path Digital Website");
+        formData.append("subject", `New Inquiry from ClearPathDigital - ${selectedService}`);
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
