@@ -5,9 +5,9 @@ import { TrendingDown, TrendingUp, Target } from 'lucide-react';
 
 export default function HomeProblemSolution() {
     return (
-        <section className="section-padding relative overflow-hidden">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent -z-10" />
+        <section className="section-padding relative overflow-hidden bg-white">
+            {/* Light purple background tint */}
+            <div className="absolute inset-0 bg-gradient-to-b from-violet-50/50 to-white -z-10" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <FadeIn className="text-center max-w-3xl mx-auto mb-16">
@@ -25,35 +25,35 @@ export default function HomeProblemSolution() {
 
                 <div className="grid md:grid-cols-3 gap-6">
                     {/* Problem */}
-                    <FadeIn delay={0} className="glass-card p-8 rounded-3xl border border-red-500/10 bg-red-500/5">
-                        <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-400 mb-6">
+                    <FadeIn delay={0} className="bg-red-50 border border-red-200 p-8 rounded-3xl">
+                        <div className="w-12 h-12 rounded-2xl bg-red-100 flex items-center justify-center text-red-500 mb-6">
                             <TrendingDown className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold mb-3 text-red-400/90">The Problem</h3>
-                        <p className="text-muted-foreground font-light leading-relaxed">
+                        <h3 className="text-xl font-bold mb-3 text-red-600">The Problem</h3>
+                        <p className="text-slate-600 font-light leading-relaxed">
                             Slow websites, weak SEO, inconsistent social media, and delayed customer support are silently costing you leads, revenue, and reputation every single day.
                         </p>
                     </FadeIn>
 
                     {/* Solution */}
-                    <FadeIn delay={0.15} className="glass-card p-8 rounded-3xl border border-primary/20 bg-primary/5 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent -z-10" />
-                        <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                    <FadeIn delay={0.15} className="bg-violet-50 border-2 border-violet-300 p-8 rounded-3xl relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-violet-100/50 to-transparent -z-10" />
+                        <div className="w-12 h-12 rounded-2xl bg-violet-100 flex items-center justify-center text-primary mb-6">
                             <Target className="w-6 h-6" />
                         </div>
                         <h3 className="text-xl font-bold mb-3 text-primary">Our Solution</h3>
-                        <p className="text-muted-foreground font-light leading-relaxed">
+                        <p className="text-slate-600 font-light leading-relaxed">
                             Clear Path Digital provides practical, scalable solutions — from high-performance websites and data-driven SEO to AI-powered customer support and business automation.
                         </p>
                     </FadeIn>
 
                     {/* Outcome */}
-                    <FadeIn delay={0.3} className="glass-card p-8 rounded-3xl border border-green-500/10 bg-green-500/5">
-                        <div className="w-12 h-12 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-400 mb-6">
+                    <FadeIn delay={0.3} className="bg-green-50 border border-green-200 p-8 rounded-3xl">
+                        <div className="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center text-green-600 mb-6">
                             <TrendingUp className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold mb-3 text-green-400/90">The Outcome</h3>
-                        <p className="text-muted-foreground font-light leading-relaxed">
+                        <h3 className="text-xl font-bold mb-3 text-green-700">The Outcome</h3>
+                        <p className="text-slate-600 font-light leading-relaxed">
                             Measurable results — not just digital activity. More traffic, better conversions, faster response times, and a business that operates efficiently at scale.
                         </p>
                     </FadeIn>

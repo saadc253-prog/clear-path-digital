@@ -39,7 +39,7 @@ const stats = [
 
 export default function BrandImpact() {
     return (
-        <section className="section-padding bg-slate-900/20 border-y border-white/5 relative overflow-hidden">
+        <section className="section-padding bg-gradient-to-b from-violet-50 to-slate-50 border-y border-slate-200 relative overflow-hidden">
             {/* Background glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/10 blur-[150px] pointer-events-none" />
 
@@ -69,8 +69,8 @@ export default function BrandImpact() {
                         <div className="grid sm:grid-cols-2 gap-6">
                             {stats.map((stat, i) => (
                                 <FadeIn key={i} delay={i * 0.1}>
-                                    <div className="glass-card p-6 rounded-3xl border-white/5 hover:border-primary/20 transition-all group bg-white/5">
-                                        <div className={`w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${stat.color}`}>
+                                    <div className="bg-white p-6 rounded-3xl border border-slate-200 hover:border-violet-300 hover:shadow-md transition-all group">
+                                        <div className={`w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${stat.color}`}>
                                             <stat.icon className="w-5 h-5" />
                                         </div>
                                         <div>

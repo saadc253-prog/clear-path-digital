@@ -45,8 +45,8 @@ const steps = [
 
 export default function HowWeWork() {
     return (
-        <section className="section-padding bg-slate-900/30 border-y border-white/5 relative overflow-hidden">
-            <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+        <section className="section-padding bg-slate-50 border-y border-slate-200 relative overflow-hidden">
+            <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-96 h-96 bg-violet-100/50 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <FadeIn className="text-center max-w-2xl mx-auto mb-16">
@@ -65,12 +65,12 @@ export default function HowWeWork() {
                 <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {steps.map((step, i) => (
                         <FadeIn key={step.number} delay={i * 0.1}>
-                            <div className="glass-card p-8 rounded-3xl border border-white/5 hover:border-primary/20 transition-all duration-500 h-full group bg-white/[0.02]">
+                            <div className="bg-white border border-slate-200 p-8 rounded-3xl hover:border-violet-300 hover:shadow-md transition-all duration-500 h-full group">
                                 <div className="flex items-start justify-between mb-6">
                                     <div className={`w-12 h-12 rounded-2xl ${step.bg} border ${step.border} flex items-center justify-center ${step.color} group-hover:scale-110 transition-transform`}>
                                         <step.icon className="w-5 h-5" />
                                     </div>
-                                    <span className="text-4xl font-black text-white/5 select-none">{step.number}</span>
+                                    <span className="text-4xl font-black text-slate-100 select-none">{step.number}</span>
                                 </div>
                                 <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">{step.title}</h3>
                                 <p className="text-sm text-muted-foreground font-light leading-relaxed">{step.description}</p>

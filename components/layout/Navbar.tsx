@@ -93,7 +93,7 @@ export default function Navbar() {
             <div className="w-full max-w-[1400px] px-4 mx-auto">
                 <nav
                     className={`mx-auto w-full max-w-5xl rounded-full transition-all duration-500 border ${isScrolled
-                        ? 'glass px-6 py-3 border-white/5 shadow-lg'
+                        ? 'glass px-6 py-3 border-slate-200 shadow-md'
                         : 'bg-transparent border-transparent px-2 py-2'
                         } flex items-center justify-between`}
                 >
@@ -111,7 +111,7 @@ export default function Navbar() {
                             onMouseEnter={() => setIsServicesOpen(true)}
                             onMouseLeave={() => setIsServicesOpen(false)}
                         >
-                            <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground group-hover:text-white transition-colors">
+                            <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
                                 Services
                                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180 text-primary' : ''}`} />
                             </button>
@@ -126,19 +126,19 @@ export default function Navbar() {
                                         transition={{ duration: 0.2 }}
                                         className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[600px]"
                                     >
-                                        <div className="glass-card rounded-3xl border border-white/10 p-6 grid grid-cols-2 gap-4 shadow-2xl backdrop-blur-3xl">
+                                        <div className="bg-white rounded-3xl border border-slate-200 p-6 grid grid-cols-2 gap-4 shadow-xl">
                                             {services.map((service) => (
                                                 <Link
                                                     key={service.title}
                                                     href={service.href}
-                                                    className="group/item p-4 rounded-2xl hover:bg-white/5 transition-all border border-transparent hover:border-white/10"
+                                                    className="group/item p-4 rounded-2xl hover:bg-violet-50 transition-all border border-transparent hover:border-violet-200"
                                                 >
                                                     <div className="flex items-center gap-4">
-                                                        <div className={`w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center ${service.color} group-hover/item:scale-110 group-hover/item:bg-primary/10 transition-all`}>
+                                                        <div className={`w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center ${service.color} group-hover/item:scale-110 group-hover/item:bg-primary/10 transition-all`}>
                                                             {service.icon}
                                                         </div>
                                                         <div>
-                                                            <div className="text-sm font-bold text-white group-hover/item:text-primary transition-colors">
+                                                            <div className="text-sm font-bold text-foreground group-hover/item:text-primary transition-colors">
                                                                 {service.title}
                                                             </div>
                                                             <div className="text-xs text-muted-foreground font-light line-clamp-1">
@@ -148,7 +148,7 @@ export default function Navbar() {
                                                     </div>
                                                 </Link>
                                             ))}
-                                            <div className="col-span-2 pt-4 mt-2 border-t border-white/5 flex justify-center">
+                                            <div className="col-span-2 pt-4 mt-2 border-t border-slate-100 flex justify-center">
                                                 <Link href="/services" className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 hover:gap-4 transition-all">
                                                     View All Services <ArrowRight className="w-4 h-4" />
                                                 </Link>
@@ -163,7 +163,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm font-medium text-muted-foreground hover:text-white transition-colors"
+                                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                             >
                                 {link.name}
                             </Link>
@@ -171,7 +171,7 @@ export default function Navbar() {
                         <div className="w-px h-4 bg-border mx-2" />
                         <Link
                             href="/contact"
-                            className="text-sm font-medium px-5 py-2 rounded-full bg-primary text-primary-foreground hover:bg-white/90 transition-colors"
+                            className="text-sm font-medium px-5 py-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors shadow-sm"
                         >
                             Let's Talk
                         </Link>
@@ -227,7 +227,7 @@ export default function Navbar() {
                                                 exit={{ height: 0, opacity: 0 }}
                                                 className="overflow-hidden"
                                             >
-                                                <div className="grid gap-4 pl-4 border-l border-white/10">
+                                                <div className="grid gap-4 pl-4 border-l border-slate-200">
                                                     {services.map((service) => (
                                                         <Link
                                                             key={service.title}
@@ -235,7 +235,7 @@ export default function Navbar() {
                                                             onClick={() => setMobileMenuOpen(false)}
                                                             className="flex flex-col gap-1 py-2"
                                                         >
-                                                            <div className="text-xl font-bold text-white/90">{service.title}</div>
+                                                            <div className="text-xl font-bold text-foreground hover:text-primary transition-colors">{service.title}</div>
                                                             <div className="text-xs text-muted-foreground font-light">{service.description}</div>
                                                         </Link>
                                                     ))}
@@ -273,7 +273,7 @@ export default function Navbar() {
                                     initial={{ x: -20, opacity: 0 }}
                                     animate={{ x: 0, opacity: 1 }}
                                     transition={{ delay: 0.3 }}
-                                    className="pt-6 border-t border-white/10"
+                                    className="pt-6 border-t border-slate-200"
                                 >
                                     <Link
                                         href="/contact"

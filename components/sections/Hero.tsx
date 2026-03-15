@@ -22,7 +22,7 @@ export default function Hero() {
     return (
         <>
             {/* ── HERO ── */}
-            <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32 pb-20 bg-background">
+            <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32 pb-20 bg-gradient-to-b from-violet-50 to-white">
                 {/* Interactive Neural Network Background */}
                 <NeuralNetworkBackground />
 
@@ -33,7 +33,7 @@ export default function Hero() {
                 </div>
 
                 {/* Decorative Grid Overlay */}
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10 -z-10" />
+                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-5 -z-10" />
 
                 <div className="w-full max-w-[1400px] px-4 md:px-8 relative z-10">
                     <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -78,7 +78,7 @@ export default function Hero() {
                                 {/* Trust Microcopy */}
                                 <FadeIn className="flex flex-wrap gap-6 pt-2">
                                     {['No commitment required', 'Response within 24 hours', 'Serving clients worldwide'].map((item) => (
-                                        <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground/70">
+                                        <div key={item} className="flex items-center gap-2 text-sm text-slate-500">
                                             <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                                             <span>{item}</span>
                                         </div>
@@ -93,9 +93,9 @@ export default function Hero() {
                                 <motion.div
                                     animate={{ rotate: 360 }}
                                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                                    className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-accent/20 rounded-full blur-3xl opacity-30"
+                                    className="absolute inset-0 bg-gradient-to-br from-violet-200/50 via-transparent to-cyan-200/30 rounded-full blur-3xl"
                                 />
-                                <div className="absolute inset-4 glass-card rounded-[3rem] border-white/10 flex items-center justify-center overflow-hidden">
+                                <div className="absolute inset-4 bg-white rounded-[3rem] border border-slate-200 shadow-xl flex items-center justify-center overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
                                     <div className="p-12 text-center space-y-4">
                                         <div className="text-5xl font-black text-primary">100%</div>
@@ -118,11 +118,11 @@ export default function Hero() {
             </section>
 
             {/* ── VALUE STRIP ── */}
-            <div className="bg-white/[0.02] border-y border-white/5 py-5 overflow-hidden">
+            <div className="bg-violet-50 border-y border-slate-200 py-5 overflow-hidden">
                 <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                     <div className="flex flex-wrap justify-center gap-x-10 gap-y-3">
                         {valueStrip.map(({ label, icon: Icon }) => (
-                            <div key={label} className="flex items-center gap-2 text-sm font-medium text-muted-foreground/70 hover:text-primary transition-colors">
+                            <div key={label} className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-primary transition-colors">
                                 <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                                 {label}
                             </div>

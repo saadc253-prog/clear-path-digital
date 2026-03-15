@@ -17,12 +17,12 @@ const FloatingShapes = dynamic(() => import('./FloatingShapes'), { ssr: false })
 
 export default function WhyChooseUs() {
     return (
-        <section className="section-padding bg-slate-900/40 relative overflow-hidden">
+        <section className="section-padding bg-slate-50 relative overflow-hidden">
             {/* 3D Floating Geometric Elements */}
             <FloatingShapes />
 
             {/* Background Decorative Element */}
-            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -z-20" />
+            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-violet-100 rounded-full blur-[100px] -z-20" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
                         </p>
                     </FadeIn>
 
-                    <FadeIn delay={0.2} className="glass-card p-8 md:p-12 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-white/5 to-transparent">
+                    <FadeIn delay={0.2} className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-200 shadow-sm">
                         <div className="space-y-6">
                             {reasons.map((reason, index) => (
                                 <div key={index} className="flex items-start gap-4 group">

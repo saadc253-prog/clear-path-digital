@@ -61,8 +61,8 @@ export default function ServicesOverview() {
     return (
         <section className="section-padding relative overflow-hidden bg-background">
             {/* Background Accent Glows */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] -z-10" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] -z-10" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-100/50 blur-[120px] -z-10" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-100/30 blur-[120px] -z-10" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <FadeIn className="mb-24 text-left max-w-4xl">
@@ -88,27 +88,27 @@ export default function ServicesOverview() {
                         >
                             <Tilt className="h-full">
                                 <Link href={service.href} className="block h-full group">
-                                    <div className={`h-full glass-card p-8 rounded-[2.5rem] transition-all duration-700 hover:bg-white/5 hover:border-primary/30 relative overflow-hidden flex flex-col justify-between bg-gradient-to-br ${service.color} to-transparent`}>
+                                    <div className={`h-full bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-violet-300 hover:shadow-lg transition-all duration-700 relative overflow-hidden flex flex-col justify-between`}>
 
                                         <div className="relative z-10 h-full flex flex-col">
-                                            <div className="mb-8 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all duration-500">
+                                            <div className="mb-8 w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-500">
                                                 <service.icon className="h-6 w-6" />
                                             </div>
 
                                             <div className="mt-auto">
-                                                <h3 className="text-2xl font-black mb-3 tracking-tight group-hover:text-primary transition-colors">{service.title}</h3>
-                                                <p className="text-muted-foreground font-light text-base leading-relaxed mb-6 line-clamp-2 md:line-clamp-none">
+                                                <h3 className="text-2xl font-black mb-3 tracking-tight text-foreground group-hover:text-primary transition-colors">{service.title}</h3>
+                                                <p className="text-slate-500 font-light text-base leading-relaxed mb-6 line-clamp-2 md:line-clamp-none">
                                                     {service.description}
                                                 </p>
 
                                                 <div className="flex items-center text-sm font-bold uppercase tracking-widest text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                                    Deploy Solution <ArrowUpRight className="ml-2 w-4 h-4" />
+                                                    Learn More <ArrowUpRight className="ml-2 w-4 h-4" />
                                                 </div>
                                             </div>
                                         </div>
 
-                                        {/* Subtle Rim Light */}
-                                        <div className="absolute inset-0 border border-white/5 group-hover:border-primary/20 rounded-[2.5rem] pointer-events-none transition-colors duration-700" />
+                                        {/* Hover rim */}
+                                        <div className="absolute inset-0 border-2 border-transparent group-hover:border-violet-200 rounded-[2.5rem] pointer-events-none transition-colors duration-700" />
                                     </div>
                                 </Link>
                             </Tilt>
