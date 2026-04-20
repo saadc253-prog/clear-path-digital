@@ -27,8 +27,8 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="section-padding bg-white relative overflow-hidden">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-100/40 rounded-full blur-[100px] pointer-events-none" />
+        <section className="section-padding relative overflow-hidden">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="w-full max-w-[1400px] px-4 md:px-8 mx-auto">
                 <FadeIn className="text-center max-w-2xl mx-auto mb-16">
@@ -47,23 +47,16 @@ export default function Testimonials() {
                 <StaggerContainer className="grid md:grid-cols-3 gap-6">
                     {testimonials.map((t, i) => (
                         <FadeIn key={i} delay={i * 0.1}>
-                            <div className="bg-white border border-slate-200 p-8 rounded-3xl hover:border-violet-300 hover:shadow-md transition-all duration-500 h-full flex flex-col group">
-                                {/* Stars */}
+                            <div className="glass-card p-8 rounded-3xl border border-white/5 hover:border-primary/20 transition-all duration-500 h-full flex flex-col bg-white/[0.02] group">
                                 <div className="flex gap-1 mb-6">
                                     {[...Array(t.rating)].map((_, s) => (
                                         <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                                     ))}
                                 </div>
-
-                                {/* Quote icon */}
                                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
-
-                                {/* Quote text */}
-                                <p className="text-slate-600 font-light leading-relaxed italic flex-1 mb-8">
+                                <p className="text-foreground/80 font-light leading-relaxed italic flex-1 mb-8">
                                     "{t.quote}"
                                 </p>
-
-                                {/* Author */}
                                 <div className="flex items-center gap-3 border-t border-white/5 pt-6">
                                     <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold text-sm">
                                         {t.author[0]}

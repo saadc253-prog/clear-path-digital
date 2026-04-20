@@ -1,52 +1,55 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #0f172a;
+  --color-background: #0f172a;
+  /* Deep Midnight Blue */
+  --color-foreground: #f8fafc;
+  /* Ghost White */
 
-  --color-primary: #7c3aed;
-  /* Rich Violet */
-  --color-primary-hover: #6d28d9;
+  --color-primary: #8b5cf6;
+  /* Vivid Violet */
+  --color-primary-hover: #7c3aed;
   --color-primary-foreground: #ffffff;
 
-  --color-muted: #f1f5f9;
-  /* Slate 100 */
-  --color-muted-foreground: #475569;
-  /* Slate 600 */
+  --color-muted: #1e293b;
+  /* Slate 800 */
+  --color-muted-foreground: #94a3b8;
+  /* Slate 400 */
 
-  --color-accent: #0891b2;
-  /* Cyan 600 */
-  --color-accent-foreground: #ffffff;
+  --color-accent: #06b6d4;
+  /* Electric Cyan */
+  --color-accent-foreground: #0f172a;
 
-  --color-border: #e2e8f0;
-  /* Slate 200 */
+  --color-border: #1e293b;
 
-  --color-card: #f8fafc;
-  --color-card-foreground: #0f172a;
+  --color-card: #010413;
+  --color-card-foreground: #f8fafc;
 
-  --color-popover: #ffffff;
-  --color-popover-foreground: #0f172a;
+  --color-popover: #010413;
+  --color-popover-foreground: #f8fafc;
 
   --font-sans: var(--font-inter);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --card: #f8fafc;
-  --card-foreground: #0f172a;
-  --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #7c3aed;
-  --primary-hover: #6d28d9;
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #010413;
+  --card-foreground: #f8fafc;
+  --popover: #010413;
+  --popover-foreground: #f8fafc;
+  --primary: #8b5cf6;
+  /* Violet */
+  --primary-hover: #7c3aed;
   --primary-foreground: #ffffff;
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
-  --accent: #0891b2;
-  --accent-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #f1f5f9;
-  --ring: #7c3aed;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #06b6d4;
+  /* Cyan */
+  --accent-foreground: #0f172a;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #8b5cf6;
 }
 
 html,
@@ -61,23 +64,22 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
   antialiased: true;
-  color-scheme: light;
+  color-scheme: dark;
 }
-
 
 /* Glassmorphism Utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(15, 23, 42, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Fluid Typography Utilities */
@@ -122,16 +124,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #1e293b;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+  background: #8b5cf6;
 }
 
 /* Lenis Smooth Scroll */
