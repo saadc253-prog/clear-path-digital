@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
   description: 'Full-service digital marketing agency for modern businesses.',
 };
 
+const GA_ID = 'G-08W7GZ7C0P';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,6 +24,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </head>
       <body className={cn(inter.variable, "bg-background text-foreground overflow-x-hidden min-h-screen flex flex-col")}>
         <MouseFollower />
         <SmoothScroller>
@@ -34,3 +52,4 @@ export default function RootLayout({
     </html>
   );
 }
+
